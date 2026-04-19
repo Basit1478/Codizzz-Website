@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #070d1a;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(245,197,24,0.3) #0a1020;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a1020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f5c518;
+  border-radius: 3px;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #f5c518, #fbbf24, #fde68a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold border glow */
+.gold-glow {
+  box-shadow: 0 0 30px rgba(245, 197, 24, 0.2), 0 0 60px rgba(245, 197, 24, 0.1);
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 40px rgba(245, 197, 24, 0.4), 0 0 80px rgba(245, 197, 24, 0.2);
+}
+
+/* Card hover effect */
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(245, 197, 24, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(245, 197, 24, 0.5);
+  box-shadow: 0 20px 60px rgba(245, 197, 24, 0.15);
+}
+
+/* Animated background stars */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(245, 197, 24, 0.6);
+  border-radius: 50%;
+  animation: twinkle var(--duration, 3s) ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(245, 197, 24, 0.3); }
+  100% { box-shadow: 0 0 40px rgba(245, 197, 24, 0.8); }
+}
+
+/* Nav glassmorphism */
+.nav-glass {
+  background: rgba(7, 13, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(245, 197, 24, 0.1);
+}
+
+/* Section fade-in on scroll */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.hidden-init {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.hidden-init.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* Number counter glow */
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f5c518, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(245, 197, 24, 0.1);
+  border: 1px solid rgba(245, 197, 24, 0.3);
+  color: #f5c518;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #f5c518, #d97706);
+  color: #040810;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(245, 197, 24, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #f5c518;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: 2px solid #f5c518;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: rgba(245, 197, 24, 0.1);
+  transform: translateY(-2px);
+}
