@@ -117,7 +117,7 @@ export default function Contact() {
             </div>
 
             {/* Social */}
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-3">
               {["LinkedIn", "GitHub", "Twitter", "Upwork"].map((platform) => (
                 <a
                   key={platform}

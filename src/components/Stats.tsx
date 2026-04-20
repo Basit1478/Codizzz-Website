@@ -108,7 +108,7 @@ export default function Stats() {
         className="reveal max-w-5xl mx-auto px-6 mb-20 rounded-2xl border border-gold-500/20 gold-glow"
         style={{ background: "rgba(245,197,24,0.03)" }}
       >
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/5">
           {stats.map((stat) => (
             <StatCard key={stat.label} {...stat} />
           ))}
