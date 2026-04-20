@@ -3,8 +3,18 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Contact | Codizzz AI Solutions",
-  description: "Get in touch with Codizzz — free consultation for AI development, full stack apps, AI agents, and more.",
+  title: "Contact Us",
+  description:
+    "Get a free consultation with Codizzz. Tell us about your project and we'll respond within 24 hours with a tailored proposal for AI development, full stack apps, AI agents, and more.",
+  alternates: {
+    canonical: "https://codizzz.com/contact",
+  },
+  openGraph: {
+    title: "Contact Codizzz | Free Consultation",
+    description:
+      "Get in touch with Codizzz for a free consultation. We respond within 24 hours.",
+    url: "https://codizzz.com/contact",
+  },
 };
 
 export default function ContactPage() {

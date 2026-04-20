@@ -2,12 +2,113 @@ import type { Metadata } from "next";
 import "./globals.css";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 
+const baseUrl = "https://codizzz.com";
+
 export const metadata: Metadata = {
-  title: "Codizzz | AI Solutions Agency",
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: "Codizzz | AI Solutions Agency — Pakistan",
+    template: "%s | Codizzz",
+  },
   description:
-    "Codizzz — AI Solutions Agency. We build AI Agents, Full Stack Apps, Mobile Apps, Graphic Designs, and Digital Employees. Est. 2025.",
-  keywords:
-    "AI agency, full stack development, AI agents, digital employee, mobile app development, graphic design, AI video editing",
+    "Codizzz is a Pakistan-based AI Solutions Agency. We build AI Agents, AI Digital Employees, Full Stack Web Apps, Mobile Apps, Graphic Designs & AI Video Editing for businesses worldwide.",
+  keywords: [
+    "AI agency Pakistan",
+    "AI solutions agency",
+    "AI agents development",
+    "AI digital employee",
+    "full stack development Pakistan",
+    "Next.js development",
+    "mobile app development Pakistan",
+    "graphic design agency",
+    "AI video editing",
+    "LLM integration",
+    "RAG systems",
+    "chatbot development",
+    "Codizzz",
+  ],
+  authors: [{ name: "Codizzz", url: baseUrl }],
+  creator: "Codizzz",
+  publisher: "Codizzz",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: baseUrl,
+    siteName: "Codizzz",
+    title: "Codizzz | AI Solutions Agency — Pakistan",
+    description:
+      "We build AI Agents, AI Digital Employees, Full Stack Apps, Mobile Apps & more. Pakistan-based, serving clients worldwide.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Codizzz AI Solutions Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Codizzz | AI Solutions Agency",
+    description:
+      "We build AI Agents, AI Digital Employees, Full Stack Apps, Mobile Apps & more.",
+    images: ["/og-image.jpg"],
+  },
+  alternates: {
+    canonical: baseUrl,
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  verification: {
+    google: "",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Codizzz",
+  url: baseUrl,
+  logo: `${baseUrl}/logo.png`,
+  description:
+    "AI Solutions Agency based in Pakistan, building AI Agents, Full Stack Apps, Mobile Apps and more.",
+  foundingDate: "2025",
+  founders: [{ "@type": "Person", name: "Basit Ali" }],
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "PK",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+92-333-2011256",
+    contactType: "customer service",
+    availableLanguage: ["English", "Urdu"],
+  },
+  sameAs: [],
+  areaServed: "Worldwide",
+  serviceType: [
+    "AI Development",
+    "Full Stack Development",
+    "Mobile App Development",
+    "Graphic Design",
+    "AI Agents",
+    "AI Digital Employee",
+    "AI Video Editing",
+    "MS Office Automation",
+  ],
 };
 
 export default function RootLayout({
@@ -27,6 +128,10 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="antialiased">

@@ -4,8 +4,18 @@ import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "About | Codizzz AI Solutions",
-  description: "Learn about Codizzz — an AI Solutions Agency established in 2025 in Pakistan.",
+  title: "About Us",
+  description:
+    "Learn about Codizzz — a Pakistan-based AI Solutions Agency founded in 2025. Meet our team of AI engineers, full stack developers, and designers building intelligent solutions for businesses worldwide.",
+  alternates: {
+    canonical: "https://codizzz.com/about",
+  },
+  openGraph: {
+    title: "About Codizzz | AI Solutions Agency",
+    description:
+      "Meet the team behind Codizzz — AI engineers and developers building smart solutions for businesses worldwide.",
+    url: "https://codizzz.com/about",
+  },
 };
 
 const team = [

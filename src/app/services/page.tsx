@@ -5,8 +5,18 @@ import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Services | Codizzz AI Solutions",
-  description: "AI Development, Full Stack, Graphic Design, AI Agents, Digital Employees, Video Editing, Mobile Apps, MS Office automation.",
+  title: "Services",
+  description:
+    "Explore Codizzz services: AI Development, AI Agents, AI Digital Employees, Full Stack Web Apps, Mobile App Development, Graphic Design, AI Video Editing, and MS Office Automation.",
+  alternates: {
+    canonical: "https://codizzz.com/services",
+  },
+  openGraph: {
+    title: "Services | Codizzz AI Solutions Agency",
+    description:
+      "From AI Agents to Full Stack Apps — explore all 8 services offered by Codizzz for businesses worldwide.",
+    url: "https://codizzz.com/services",
+  },
 };
 
 export default function ServicesPage() {
