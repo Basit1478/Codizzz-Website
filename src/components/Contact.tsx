@@ -119,9 +119,9 @@ export default function Contact() {
             {/* Social */}
             <div className="flex flex-wrap gap-3">
               {[
-                { label: "LinkedIn", href: "#" },
-                { label: "GitHub", href: "#" },
-                { label: "Twitter", href: "#" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/in/basit-ali-baloch-738285253/" },
+                { label: "GitHub", href: "https://github.com/Basit1478" },
+                { label: "Twitter", href: "https://x.com/basitali2405" },
                 { label: "Upwork", href: "https://www.upwork.com/freelancers/~01803d6a0410c278de" },
               ].map((platform) => (
                 <a
