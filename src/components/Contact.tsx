@@ -118,13 +118,20 @@ export default function Contact() {
 
             {/* Social */}
             <div className="flex flex-wrap gap-3">
-              {["LinkedIn", "GitHub", "Twitter", "Upwork"].map((platform) => (
+              {[
+                { label: "LinkedIn", href: "#" },
+                { label: "GitHub", href: "#" },
+                { label: "Twitter", href: "#" },
+                { label: "Upwork", href: "https://www.upwork.com/freelancers/~01803d6a0410c278de" },
+              ].map((platform) => (
                 <a
-                  key={platform}
-                  href="#"
+                  key={platform.label}
+                  href={platform.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-gray-400 hover:text-gold-500 hover:border-gold-500/30 text-xs font-medium transition-all duration-200"
                 >
-                  {platform}
+                  {platform.label}
                 </a>
               ))}
             </div>
