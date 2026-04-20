@@ -41,13 +41,20 @@ export default function Footer() {
               Est. 2025, Pakistan.
             </p>
             <div className="flex gap-3">
-              {["LI", "GH", "TW", "UP"].map((s) => (
+              {[
+                { label: "LI", href: "#" },
+                { label: "GH", href: "#" },
+                { label: "TW", href: "#" },
+                { label: "UP", href: "https://www.upwork.com/freelancers/~01803d6a0410c278de" },
+              ].map((s) => (
                 <a
-                  key={s}
-                  href="#"
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500/30 text-xs font-bold transition-all"
                 >
-                  {s}
+                  {s.label}
                 </a>
               ))}
             </div>
