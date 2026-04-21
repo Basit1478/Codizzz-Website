@@ -12,7 +12,7 @@ export default function CTABanner() {
         style={{ background: "radial-gradient(circle, #f5c518 0%, transparent 70%)" }}
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <span className="badge mb-6">Ready to Start?</span>
         <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
           Build Something <span className="gradient-text">Amazing</span>

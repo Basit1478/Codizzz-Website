@@ -121,7 +121,7 @@ export default function Services() {
         style={{ background: "radial-gradient(circle, #f5c518 0%, transparent 70%)" }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section header */}
         <div className="text-center mb-16 reveal">
           <span className="badge mb-4">What We Offer</span>

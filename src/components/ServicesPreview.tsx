@@ -31,7 +31,7 @@ export default function ServicesPreview() {
       className="relative py-24"
       style={{ background: "linear-gradient(180deg, #0a1020 0%, #070d1a 100%)" }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14 reveal">
           <span className="badge mb-4">What We Do</span>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">

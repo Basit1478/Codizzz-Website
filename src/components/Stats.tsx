@@ -105,7 +105,7 @@ export default function Stats() {
     >
       {/* Stats bar */}
       <div
-        className="reveal max-w-5xl mx-auto px-6 mb-20 rounded-2xl border border-gold-500/20 gold-glow"
+        className="reveal max-w-5xl mx-auto px-4 sm:px-6 mb-20 rounded-2xl border border-gold-500/20 gold-glow"
         style={{ background: "rgba(245,197,24,0.03)" }}
       >
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/5">
@@ -116,7 +116,7 @@ export default function Stats() {
       </div>
 
       {/* Testimonials */}
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 reveal">
           <span className="badge mb-4">Testimonials</span>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">

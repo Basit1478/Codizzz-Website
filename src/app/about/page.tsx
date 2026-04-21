@@ -38,7 +38,7 @@ export default function AboutPage() {
           className="orb w-80 h-80 -top-20 left-1/2 -translate-x-1/2 opacity-10"
           style={{ background: "radial-gradient(circle, #f5c518 0%, transparent 70%)" }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
           <span className="badge mb-5">Est. 2025 — Pakistan</span>
           <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
             About <span className="gradient-text">Codizzz</span>
@@ -57,7 +57,7 @@ export default function AboutPage() {
         className="py-20"
         style={{ background: "linear-gradient(180deg, #0a1020 0%, #070d1a 100%)" }}
       >
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div>
             <span className="badge mb-5">Our Story</span>
             <h2 className="text-4xl font-black text-white mb-6">
@@ -81,7 +81,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5">
             {[
               { label: "Founded", value: "2025" },
               { label: "Services", value: "8+" },
@@ -90,9 +90,9 @@ export default function AboutPage() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] text-center"
+                className="p-4 sm:p-6 rounded-2xl border border-white/5 bg-white/[0.02] text-center"
               >
-                <div className="stat-number text-4xl mb-1">{item.value}</div>
+                <div className="stat-number mb-1">{item.value}</div>
                 <p className="text-gray-500 text-sm">{item.label}</p>
               </div>
             ))}
@@ -105,7 +105,7 @@ export default function AboutPage() {
         className="py-20"
         style={{ background: "linear-gradient(180deg, #070d1a 0%, #040810 100%)" }}
       >
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <span className="badge mb-5">The Team</span>
             <h2 className="text-4xl font-black text-white mb-4">

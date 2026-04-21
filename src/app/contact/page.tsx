@@ -29,7 +29,7 @@ export default function ContactPage() {
         <h1 className="text-5xl md:text-6xl font-black text-white mb-5">
           Let&apos;s <span className="gradient-text">Talk</span>
         </h1>
-        <p className="text-gray-400 text-lg max-w-xl mx-auto px-6">
+        <p className="text-gray-400 text-lg max-w-xl mx-auto px-4 sm:px-6">
           Tell us about your project and we&apos;ll get back to you within 24 hours
           with a tailored proposal.
         </p>

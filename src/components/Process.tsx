@@ -62,7 +62,7 @@ export default function Process() {
       {/* Decorative line */}
       <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent hidden lg:block" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16 reveal">
           <span className="badge mb-4">How It Works</span>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">

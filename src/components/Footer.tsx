@@ -24,7 +24,7 @@ export default function Footer() {
       className="relative pt-20 pb-8 border-t border-white/5"
       style={{ background: "#040810" }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">

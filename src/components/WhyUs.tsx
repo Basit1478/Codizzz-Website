@@ -68,7 +68,7 @@ export default function WhyUs() {
       className="relative py-24"
       style={{ background: "linear-gradient(180deg, #070d1a 0%, #040810 100%)" }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-16 reveal">
           <span className="badge mb-4">Why Codizzz</span>

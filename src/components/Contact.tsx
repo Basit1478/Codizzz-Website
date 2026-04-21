@@ -72,7 +72,7 @@ export default function Contact() {
         style={{ background: "radial-gradient(circle, #f5c518 0%, transparent 70%)" }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left — info */}
           <div className="reveal space-y-8">
@@ -150,7 +150,7 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] space-y-5"
+                className="p-5 sm:p-8 rounded-2xl border border-white/5 bg-white/[0.02] space-y-5"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
