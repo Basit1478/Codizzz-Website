@@ -20,8 +20,8 @@ export const metadata = {
 
 const team = [
   { name: "Basit Ali", role: "Founder & AI Engineer", avatar: "BA", skills: ["LLM Systems", "Full Stack", "AI Agents", "Python", "Claude API", "RAG","Graphic Design"] },
-  { name: "Umer Ali", role: "Frontend Developer", avatar: "FM", skills: ["Next.js", "React", "UI/UX"] },
-  { name: "Anzal", role: "AI Engineer", avatar: "TM", skills: ["Python", "Claude API", "RAG"] },
+  { name: "Umer Ali", role: "Frontend Developer", avatar: "UA", skills: ["Next.js", "React", "UI/UX"] },
+  { name: "Muhammad Anzal", role: "AI Engineer", avatar: "MA", skills: ["Python", "Claude API", "RAG"] },
 ];
 
 export default function AboutPage() {

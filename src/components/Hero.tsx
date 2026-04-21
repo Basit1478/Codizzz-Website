@@ -74,7 +74,7 @@ export default function Hero() {
         style={{ background: "radial-gradient(circle, rgba(245,197,24,0.05) 0%, transparent 70%)", filter: "blur(60px)" }} />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 text-center">
 
         {/* Badge */}
         <div
@@ -121,10 +121,10 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           style={{ animation: "slideUp 0.7s ease 0.3s both" }}
         >
-          <Link href="/services" className="btn-primary text-base px-10 py-4">
+          <Link href="/services" className="btn-primary text-sm sm:text-base w-full sm:w-auto text-center">
             Explore Services
           </Link>
-          <Link href="/contact" className="btn-outline text-base px-10 py-4">
+          <Link href="/contact" className="btn-outline text-sm sm:text-base w-full sm:w-auto text-center">
             Book a Free Call
           </Link>
         </div>

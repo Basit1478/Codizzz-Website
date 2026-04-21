@@ -146,7 +146,7 @@ body {
 
 /* Number counter glow */
 .stat-number {
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 6vw, 3rem);
   font-weight: 800;
   background: linear-gradient(135deg, #f5c518, #fbbf24);
   -webkit-background-clip: text;
@@ -176,11 +176,17 @@ body {
   background: linear-gradient(135deg, #f5c518, #d97706);
   color: #040810;
   font-weight: 700;
-  padding: 14px 32px;
+  padding: 12px 24px;
   border-radius: 8px;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .btn-primary {
+    padding: 14px 32px;
+  }
 }
 
 .btn-primary:hover {
@@ -192,11 +198,17 @@ body {
   background: transparent;
   color: #f5c518;
   font-weight: 700;
-  padding: 14px 32px;
+  padding: 12px 24px;
   border-radius: 8px;
   border: 2px solid #f5c518;
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .btn-outline {
+    padding: 14px 32px;
+  }
 }
 
 .btn-outline:hover {
