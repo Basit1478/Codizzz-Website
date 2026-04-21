@@ -19,9 +19,21 @@ export const metadata = {
 };
 
 const team = [
-  { name: "Basit Ali", role: "Founder & AI Engineer", avatar: "BA", skills: ["LLM Systems", "Full Stack", "AI Agents", "Python", "Claude API", "RAG","Graphic Design"] },
-  { name: "Umer Ali", role: "Frontend Developer", avatar: "UA", skills: ["Next.js", "React", "UI/UX"] },
-  { name: "Muhammad Anzal", role: "AI Engineer", avatar: "MA", skills: ["Python", "Claude API", "RAG"] },
+  {
+    name: "Basit Ali", role: "Founder & AI Engineer", avatar: "BA",
+    skills: ["LLM Systems", "Full Stack", "AI Agents", "Python", "Claude API", "RAG", "Graphic Design"],
+    social: { github: "https://github.com/Basit1478", linkedin: "https://www.linkedin.com/in/basit-ali-baloch-738285253/", twitter: "https://x.com/basitali2405" }
+  },
+  {
+    name: "Umer Ali", role: "Agentic Developer", avatar: "UA",
+    skills: ["Next.js", "React", "Python", "TypeScript", "AI Agents"],
+    social: { github: "#", linkedin: "#", twitter: "#" }
+  },
+  {
+    name: "Muhammad Anzal", role: "AI Developer", avatar: "MA",
+    skills: ["Python", "Claude API", "RAG"],
+    social: { github: "#", linkedin: "#", twitter: "#" }
+  },
 ];
 
 export default function AboutPage() {
@@ -129,7 +141,7 @@ export default function AboutPage() {
                 <p className="text-gold-500 text-xs font-semibold tracking-wide uppercase mb-5">
                   {member.role}
                 </p>
-                <div className="flex flex-wrap justify-center gap-2">
+                <div className="flex flex-wrap justify-center gap-2 mb-5">
                   {member.skills.map((skill) => (
                     <span
                       key={skill}
@@ -138,6 +150,20 @@ export default function AboutPage() {
                       {skill}
                     </span>
                   ))}
+                </div>
+                <div className="flex justify-center gap-3">
+                  <a href={member.social.github} target="_blank" rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500/30 text-xs font-bold transition-all">
+                    GH
+                  </a>
+                  <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500/30 text-xs font-bold transition-all">
+                    LI
+                  </a>
+                  <a href={member.social.twitter} target="_blank" rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500/30 text-xs font-bold transition-all">
+                    TW
+                  </a>
                 </div>
               </div>
             ))}

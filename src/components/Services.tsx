@@ -71,6 +71,7 @@ const services = [
     features: ["React Native", "Flutter", "iOS & Android", "App Store Launch"],
     color: "from-sky-500/20 to-blue-500/10",
     border: "hover:border-sky-500/50",
+    comingSoon: true,
   },
   {
     icon: "📊",
@@ -81,6 +82,7 @@ const services = [
     features: ["Excel & VBA", "Power BI", "SharePoint", "Office Automation"],
     color: "from-green-500/20 to-lime-500/10",
     border: "hover:border-green-500/50",
+    comingSoon: true,
   },
 ];
 
@@ -139,13 +141,18 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`service-card reveal rounded-2xl p-6 cursor-pointer ${service.border}`}
+              className={`service-card reveal rounded-2xl p-6 cursor-pointer relative ${service.border}`}
               style={{
                 background: "rgba(10, 16, 32, 0.8)",
                 animationDelay: `${i * 0.1}s`,
                 transitionDelay: `${i * 0.05}s`,
               }}
             >
+              {service.comingSoon && (
+                <span className="absolute top-4 right-4 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-500">
+                  Coming Soon
+                </span>
+              )}
               {/* Icon */}
               <div
                 className={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-5 bg-gradient-to-br ${service.color}`}
