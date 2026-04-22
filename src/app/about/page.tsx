@@ -32,7 +32,7 @@ const team = [
   {
     name: "Muhammad Anzal", role: "AI Developer", avatar: "MA",
     skills: ["Python", "Claude API", "RAG"],
-    social: { github: "https://github.com/anzaldev", linkedin: "", twitter: "" }
+    social: { github: "", linkedin: "https://www.linkedin.com/in/muhammad-anzal-035705348/", twitter: "" }
   },
 ];
 
