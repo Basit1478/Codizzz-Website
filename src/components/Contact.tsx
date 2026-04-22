@@ -60,7 +60,7 @@ export default function Contact() {
       id="contact"
       ref={sectionRef}
       className="relative py-24 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #0a1020 0%, #040810 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg-3) 0%, var(--bg-1) 100%)" }}
     >
       {/* Orbs */}
       <div
@@ -190,7 +190,7 @@ export default function Contact() {
                     value={form.service}
                     onChange={(e) => setForm({ ...form, service: e.target.value })}
                     className="w-full bg-navy-800 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
-                    style={{ background: "rgba(10,16,32,0.9)" }}
+                    style={{ background: "var(--select-bg)" }}
                   >
                     <option value="" className="text-gray-600">Select a service...</option>
                     {services.map((s) => (

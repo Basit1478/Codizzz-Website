@@ -23,7 +23,7 @@ export default function ServicesPage() {
   return (
     <main>
       <Navbar />
-      <div className="pt-20" style={{ background: "#040810" }} />
+      <div className="pt-20" style={{ background: "var(--bg-1)" }} />
       <Services />
       <Process />
       <CTABanner />

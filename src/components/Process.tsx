@@ -57,7 +57,7 @@ export default function Process() {
       id="process"
       ref={sectionRef}
       className="relative py-24 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #040810 0%, #070d1a 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%)" }}
     >
       {/* Decorative line */}
       <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent hidden lg:block" />

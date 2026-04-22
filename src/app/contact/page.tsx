@@ -23,7 +23,7 @@ export default function ContactPage() {
       <Navbar />
       <section
         className="pt-32 pb-8 text-center"
-        style={{ background: "linear-gradient(180deg, #040810 0%, #0a1020 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--bg-1) 0%, var(--bg-3) 100%)" }}
       >
         <span className="badge mb-5">Free Consultation</span>
         <h1 className="text-5xl md:text-6xl font-black text-white mb-5">

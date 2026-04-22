@@ -115,7 +115,7 @@ export default function Services() {
       id="services"
       ref={sectionRef}
       className="relative py-24 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #0a1020 0%, #070d1a 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg-3) 0%, var(--bg-2) 100%)" }}
     >
       {/* Background orb */}
       <div
@@ -143,7 +143,7 @@ export default function Services() {
               key={service.title}
               className={`service-card reveal rounded-2xl p-6 cursor-pointer relative ${service.border}`}
               style={{
-                background: "rgba(10, 16, 32, 0.8)",
+                background: "var(--service-card-bg)",
                 animationDelay: `${i * 0.1}s`,
                 transitionDelay: `${i * 0.05}s`,
               }}

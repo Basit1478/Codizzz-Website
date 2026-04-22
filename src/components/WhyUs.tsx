@@ -66,7 +66,7 @@ export default function WhyUs() {
       id="why-us"
       ref={sectionRef}
       className="relative py-24"
-      style={{ background: "linear-gradient(180deg, #070d1a 0%, #040810 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}

@@ -59,7 +59,7 @@ export default function ProductPage() {
       {/* Hero */}
       <section
         className="pt-32 pb-24 text-center relative overflow-hidden"
-        style={{ background: "linear-gradient(180deg, #040810 0%, #0a1020 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--bg-1) 0%, var(--bg-3) 100%)" }}
       >
         <div
           className="orb w-[500px] h-[500px] -top-32 left-1/2 -translate-x-1/2 opacity-10"
@@ -92,7 +92,7 @@ export default function ProductPage() {
       {/* What is AgentHub */}
       <section
         className="py-20"
-        style={{ background: "linear-gradient(180deg, #0a1020 0%, #070d1a 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--bg-3) 0%, var(--bg-2) 100%)" }}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -147,7 +147,7 @@ export default function ProductPage() {
       {/* Features */}
       <section
         className="py-20"
-        style={{ background: "linear-gradient(180deg, #070d1a 0%, #040810 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%)" }}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
@@ -181,7 +181,7 @@ export default function ProductPage() {
       {/* CTA to AgentHub */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #070d1a 0%, #0a1020 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--bg-2) 0%, var(--bg-3) 100%)" }}
       >
         <div
           className="orb w-96 h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10"

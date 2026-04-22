@@ -29,7 +29,7 @@ export default function ServicesPreview() {
     <section
       ref={ref}
       className="relative py-24"
-      style={{ background: "linear-gradient(180deg, #0a1020 0%, #070d1a 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg-3) 0%, var(--bg-2) 100%)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14 reveal">
@@ -47,7 +47,7 @@ export default function ServicesPreview() {
             <div
               key={s.title}
               className="service-card reveal rounded-2xl p-6"
-              style={{ background: "rgba(10,16,32,0.8)", transitionDelay: `${i * 0.1}s` }}
+              style={{ background: "var(--service-card-bg)", transitionDelay: `${i * 0.1}s` }}
             >
               <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-5 bg-gradient-to-br ${s.color}`}>
                 {s.icon}

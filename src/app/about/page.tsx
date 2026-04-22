@@ -44,7 +44,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section
         className="pt-32 pb-20 text-center relative overflow-hidden"
-        style={{ background: "linear-gradient(180deg, #040810 0%, #0a1020 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--bg-1) 0%, var(--bg-3) 100%)" }}
       >
         <div
           className="orb w-80 h-80 -top-20 left-1/2 -translate-x-1/2 opacity-10"
@@ -67,7 +67,7 @@ export default function AboutPage() {
       {/* Story */}
       <section
         className="py-20"
-        style={{ background: "linear-gradient(180deg, #0a1020 0%, #070d1a 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--bg-3) 0%, var(--bg-2) 100%)" }}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
       {/* Team */}
       <section
         className="py-20"
-        style={{ background: "linear-gradient(180deg, #070d1a 0%, #040810 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%)" }}
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">

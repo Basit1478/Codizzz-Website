@@ -55,7 +55,7 @@ export default function Hero() {
     <section
       className="relative w-full min-h-screen flex flex-col items-center justify-center"
       style={{
-        background: "linear-gradient(180deg, #040810 0%, #070d1a 60%, #0a1020 100%)",
+        background: "linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 60%, var(--bg-3) 100%)",
         paddingTop: "80px",
         paddingBottom: "40px",
       }}

@@ -101,7 +101,7 @@ export default function Stats() {
       id="stats"
       ref={sectionRef}
       className="relative py-24 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #070d1a 0%, #0a1020 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--bg-2) 0%, var(--bg-3) 100%)" }}
     >
       {/* Stats bar */}
       <div

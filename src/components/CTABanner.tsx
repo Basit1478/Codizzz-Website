@@ -4,7 +4,7 @@ export default function CTABanner() {
   return (
     <section
       className="py-20 relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #070d1a 0%, #0a1020 100%)" }}
+      style={{ background: "linear-gradient(135deg, var(--bg-2) 0%, var(--bg-3) 100%)" }}
     >
       {/* Glow orb */}
       <div

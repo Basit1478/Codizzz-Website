@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const baseUrl = "https://codizzz.com";
 
@@ -135,8 +136,10 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        {children}
-        <WhatsAppWidget />
+        <ThemeProvider>
+          {children}
+          <WhatsAppWidget />
+        </ThemeProvider>
       </body>
     </html>
   );
