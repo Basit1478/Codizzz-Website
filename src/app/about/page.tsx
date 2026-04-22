@@ -96,7 +96,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-3 sm:gap-5">
             {[
               { label: "Founded", value: "2025" },
-              { label: "Services", value: "8+" },
+              { label: "Services", value: "6+" },
               { label: "Projects", value: "10+" },
               { label: "Countries Served", value: "0" },
             ].map((item) => (
