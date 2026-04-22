@@ -134,7 +134,7 @@ export default function Hero() {
           className="flex flex-wrap justify-center gap-2"
           style={{ animation: "fadeIn 0.8s ease 0.5s both" }}
         >
-          {["Claude AI", "GPT-4o", "Next.js", "React Native", "Python", "FastAPI", "Figma", "n8n"].map((tech) => (
+          {["Claude AI", "Next.js", "React Native", "Python", "FastAPI", "n8n"].map((tech) => (
             <span
               key={tech}
               className="px-3 py-1.5 text-xs font-medium text-gray-500 rounded-full"

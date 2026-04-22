@@ -37,7 +37,7 @@ const reasons = [
     icon: "💡",
     title: "Cutting-Edge Stack",
     description:
-      "We use the latest AI models, frameworks, and tools — Claude, GPT-4o, Next.js, and cloud platforms.",
+      "We use the latest AI models, frameworks, and tools — Claude,  Next.js, and cloud platforms.",
   },
 ];
 
