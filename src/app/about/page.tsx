@@ -97,8 +97,8 @@ export default function AboutPage() {
             {[
               { label: "Founded", value: "2025" },
               { label: "Services", value: "8+" },
-              { label: "Projects", value: "50+" },
-              { label: "Countries Served", value: "10+" },
+              { label: "Projects", value: "10+" },
+              { label: "Countries Served", value: "0" },
             ].map((item) => (
               <div
                 key={item.label}
