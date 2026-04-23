@@ -69,9 +69,9 @@ export const metadata: Metadata = {
     canonical: baseUrl,
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   verification: {
     google: "",
