@@ -45,7 +45,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -62,7 +62,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop: Theme toggle + CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={toggle}
             className="theme-toggle"
@@ -76,8 +76,11 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile: Theme toggle + hamburger */}
-        <div className="md:hidden flex items-center gap-2">
+        {/* Mobile/Tablet: Get Started + Theme toggle + hamburger */}
+        <div className="lg:hidden flex items-center gap-2">
+          <Link href="/contact" className="btn-primary text-xs px-3 py-2">
+            Get Started
+          </Link>
           <button
             onClick={toggle}
             className="theme-toggle"
@@ -99,7 +102,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+        className={`lg:hidden transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
         style={{ background: "var(--nav-glass-bg)" }}
       >
         <div className="px-6 py-4 flex flex-col gap-4">
