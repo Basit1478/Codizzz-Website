@@ -27,7 +27,7 @@ const team = [
   {
     name: "Umer Ali", role: "Agentic Developer", avatar: "UA",
     skills: ["Next.js", "React", "Python", "TypeScript", "AI Agents"],
-    social: { github: "https://github.com/umerali_4", linkedin: "https://www.linkedin.com/in/umer-ali-a962252ba/", twitter: "https://x.com/umerali4" }
+    social: { github: "https://github.com/umerali_4", linkedin: "https://www.linkedin.com/in/umer-ali-a962252ba/", twitter: "https://x.com/Umerali_4" }
   },
   {
     name: "Muhammad Anzal", role: "AI Developer", avatar: "MA",
