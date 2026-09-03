@@ -31,7 +31,22 @@ export const metadata: Metadata = {
     title: "Codizzz | Digital Products Built Around Your Need",
     description: "AI, automation and custom software shaped around your business.",
   },
-  icons: { icon: "/favicon.svg" },
+  icons: {
+    icon: [
+      {
+        url: "/brand/codizzz-mark-orange.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/brand/codizzz-mark-red.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    shortcut: "/brand/codizzz-mark-orange.png",
+    apple: "/brand/codizzz-mark-orange.png",
+  },
 };
 
 const organization = {

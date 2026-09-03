@@ -102,7 +102,7 @@ html[data-theme="dark"] .brand-mark__red { opacity: 1; }
 .pattern-hero__copy h1 { max-width: 850px; margin-bottom: 1.5rem; font-size: clamp(4.5rem, 6.6vw, 6rem); }
 .pattern-hero__copy > p { max-width: 58ch; margin-bottom: 2rem; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.2rem); }
 .fabrication-frame { position: absolute; z-index: 1; inset: 0 0 0 31%; overflow: hidden; background: var(--paper-deep); }
-.fabrication-frame__image { position: absolute; inset: 0; background-image: linear-gradient(90deg, color-mix(in srgb, var(--paper) 10%, transparent), transparent 30%), url('/brand/fabrication-table.png'); background-size: cover; background-position: center; filter: saturate(0.72) contrast(1.03); }
+.fabrication-frame__image { position: absolute; inset: 0; background-image: linear-gradient(90deg, color-mix(in srgb, var(--paper) 10%, transparent), transparent 30%), url('/brand/hero-digital-studio-v2.webp'); background-size: cover; background-position: center; filter: saturate(0.82) contrast(1.03); }
 html[data-theme="dark"] .fabrication-frame__image { filter: saturate(0.62) contrast(1.08) brightness(0.76); }
 .cut-path { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .cut-path path { fill: none; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 7 8; vector-effect: non-scaling-stroke; }

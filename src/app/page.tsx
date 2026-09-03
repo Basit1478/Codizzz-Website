@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         <div className="fabrication-frame" data-hero-media>
-          <div className="fabrication-frame__image" role="img" aria-label="A maker shaping a paper pattern on a cutting table" />
+          <div className="fabrication-frame__image" role="img" aria-label="A digital product engineer designing connected software workflows in a modern studio" />
           <svg className="cut-path" viewBox="0 0 800 430" aria-hidden="true">
             <path data-cut-path pathLength="1" d="M250 314h58l38-54h112l44-95h111l39 45h92" />
           </svg>
