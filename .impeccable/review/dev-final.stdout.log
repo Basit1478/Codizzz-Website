@@ -1,0 +1,99 @@
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 15.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 13.3s (577 modules)
+ ✓ Compiled in 1709ms (288 modules)
+ GET / 200 in 15372ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 1597ms (565 modules)
+ GET /about 200 in 3319ms
+ GET / 200 in 100ms
+ GET / 200 in 77ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 2.6s (581 modules)
+ GET /services 200 in 3894ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 1234ms (569 modules)
+ GET /projects 200 in 2134ms
+ ○ Compiling /product ...
+ ✓ Compiled /product in 1866ms (571 modules)
+ GET /product 200 in 2267ms
+ GET /about 200 in 71ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 4.7s (580 modules)
+ GET /contact 200 in 5101ms
+ GET / 200 in 423ms
+ GET /about 200 in 114ms
+ ✓ Compiled in 5.8s (582 modules)
+ ✓ Compiled in 1212ms (582 modules)
+ ✓ Compiled in 2.3s (582 modules)
+ ✓ Compiled in 1594ms (582 modules)
+ ✓ Compiled in 648ms (291 modules)
+ ✓ Compiled in 4.6s (582 modules)
+ ✓ Compiled in 870ms (291 modules)
+ GET /about 200 in 1758ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 2.5s (293 modules)
+ ✓ Compiled (301 modules)
+ ✓ Compiled in 7.6s (582 modules)
+ ✓ Compiled in 808ms (582 modules)
+ ✓ Compiled in 1832ms (582 modules)
+ ✓ Compiled in 985ms (582 modules)
+ ✓ Compiled in 1373ms (582 modules)
+ ✓ Compiled in 1712ms (582 modules)
+ ✓ Compiled in 1682ms (582 modules)
+ ✓ Compiled in 1261ms (582 modules)
+ ✓ Compiled in 752ms (582 modules)
+ GET /about 200 in 374ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1512ms (571 modules)
+ GET /_next/static/css/app/layout.css?v=1788107932309 404 in 2010ms
+ GET /_next/static/chunks/main-app.js?v=1788107932309 404 in 2006ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 2001ms
+ GET /_next/static/chunks/app/about/page.js 404 in 1925ms
+ GET /_next/static/chunks/main-app.js?v=1788107932309 404 in 76ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 75ms
+ GET /_next/static/chunks/app/about/page.js 404 in 72ms
+ GET /about 200 in 232ms
+ GET /_next/static/css/app/layout.css?v=1788107938310 404 in 176ms
+ GET /_next/static/chunks/main-app.js?v=1788107938310 404 in 195ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 200ms
+ GET /_next/static/chunks/app/about/page.js 404 in 198ms
+ GET /about 200 in 112ms
+ GET /_next/static/css/app/layout.css?v=1788107941565 404 in 100ms
+ GET /_next/static/chunks/main-app.js?v=1788107941565 404 in 246ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 244ms
+ GET /_next/static/chunks/app/about/page.js 404 in 246ms
+ GET /_next/static/chunks/main-app.js?v=1788107938310 404 in 38ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 48ms
+ GET /_next/static/chunks/app/about/page.js 404 in 49ms
+ GET /_next/static/chunks/main-app.js?v=1788107941565 404 in 115ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 80ms
+ GET /_next/static/chunks/app/about/page.js 404 in 80ms
+ GET / 200 in 209ms
+ GET /_next/static/css/app/layout.css?v=1788107947975 404 in 177ms
+ GET /_next/static/chunks/main-app.js?v=1788107947975 404 in 434ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 434ms
+ GET /_next/static/chunks/app/page.js 404 in 148ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 1483ms (298 modules)
+ GET /contact 200 in 2100ms
+ GET /_next/static/css/app/layout.css?v=1788107957474 404 in 99ms
+ GET /_next/static/chunks/main-app.js?v=1788107957474 404 in 166ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 166ms
+ GET / 200 in 1269ms
+ GET /_next/static/css/app/layout.css?v=1788107972196 404 in 109ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 191ms
+ GET /_next/static/chunks/main-app.js?v=1788107972196 404 in 197ms
+ GET /_next/static/chunks/app/page.js 404 in 89ms
+ GET /_next/static/chunks/main-app.js?v=1788107947975 404 in 55ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 148ms
+ GET /_next/static/chunks/app/page.js 404 in 103ms
+ ○ Compiling /_error ...
+ GET / 404 in 16809ms
+ ✓ Compiled /_error in 30.2s (795 modules)
+ ✓ Compiled in 7.2s (804 modules)

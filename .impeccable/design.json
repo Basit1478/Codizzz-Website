@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-30T16:00:00+05:00",
+  "title": "Design System: Codizzz Digital Pattern Room",
+  "extensions": {
+    "colorMeta": {
+      "accent-light": {
+        "role": "primary",
+        "displayName": "Registration Orange",
+        "canonical": "#FF8800",
+        "tonalRamp": ["#3A1B00", "#642F00", "#914600", "#BD5E00", "#E87600", "#FF982B", "#FFC078", "#FFE4C2"]
+      },
+      "accent-dark": {
+        "role": "primary",
+        "displayName": "Registration Red",
+        "canonical": "#E72700",
+        "tonalRamp": ["#390700", "#651000", "#911800", "#BB2100", "#E72700", "#FF5838", "#FF9A84", "#FFD5CA"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Pattern Paper",
+        "canonical": "#F5F2EB",
+        "tonalRamp": ["#24221F", "#46433E", "#69655E", "#8E8980", "#B3ADA3", "#D4CFC6", "#E9E5DE", "#F5F2EB"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "canonical": "#12100E",
+        "tonalRamp": ["#12100E", "#302D29", "#514C46", "#756E66", "#9B9389", "#BFB8AF", "#DED9D2", "#F5F2EB"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Rule Line",
+        "canonical": "#CFC8BD",
+        "tonalRamp": ["#24211E", "#45403B", "#665F58", "#8B8279", "#AFA69C", "#CFC8BD", "#E3DED6", "#F5F2EB"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Compressed Display", "purpose": "Hero and interior-page statements only." },
+      "headline": { "displayName": "Section Statement", "purpose": "Major editorial section headings." },
+      "title": { "displayName": "Index Title", "purpose": "Services, process steps and work names." },
+      "body": { "displayName": "Working Copy", "purpose": "Explanations, forms and supporting content." },
+      "label": { "displayName": "Registration Label", "purpose": "Navigation, actions and measurement notes." }
+    },
+    "shadows": [
+      { "name": "ticket-lift", "value": "drop-shadow(0 14px 18px rgba(18, 16, 14, 0.16))", "purpose": "Separates the clipped requirement ticket from the pale fabrication fade." }
+    ],
+    "motion": [
+      { "name": "state-fast", "value": "200ms ease", "purpose": "Control color, arrow and small movement feedback." },
+      { "name": "hero-reveal", "value": "1.1s expo.out", "purpose": "Draws the hero statement and material into view from an already-readable default." },
+      { "name": "cut-path", "value": "1.4s power3.out", "purpose": "Draws the requirement-to-outcome relationship once." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "760px" },
+      { "name": "compact-navigation", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Direct build or conversation action using the active theme registration color.",
+      "html": "<button class=\"ds-button-primary\">START A BUILD <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-button-primary{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:28px;padding:13px 20px;border:1px solid var(--accent,#FF8800);border-radius:0;background:var(--accent,#FF8800);color:var(--accent-ink,#2B1400);font:800 12px/1.2 Manrope,sans-serif;letter-spacing:.03em;text-transform:uppercase;transition:transform 200ms ease;cursor:pointer}.ds-button-primary svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform 200ms ease}.ds-button-primary:hover{transform:translateY(-2px)}.ds-button-primary:hover svg{transform:translateX(5px)}.ds-button-primary:focus-visible{outline:2px solid var(--accent,#FF8800);outline-offset:4px}"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "description": "Secondary editorial action with an accent underline and directional feedback.",
+      "html": "<a class=\"ds-text-action\" href=\"#\">EXPLORE SERVICES <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-text-action{display:inline-flex;align-items:center;gap:13px;color:var(--ink,#12100E);font:800 12px/1.2 Manrope,sans-serif;text-transform:uppercase;text-decoration:underline;text-decoration-color:var(--accent,#FF8800);text-underline-offset:.22em}.ds-text-action svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform 200ms ease}.ds-text-action:hover svg{transform:translateX(5px)}.ds-text-action:focus-visible{outline:2px solid var(--accent,#FF8800);outline-offset:4px}"
+    },
+    {
+      "name": "Ruled Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Transparent square field grounded by one rule instead of a rounded container.",
+      "html": "<label class=\"ds-field\"><span>EMAIL ADDRESS</span><input type=\"email\" placeholder=\"you@company.com\"></label>",
+      "css": ".ds-field{display:grid;gap:10px;color:var(--ink,#12100E);font-family:Manrope,sans-serif}.ds-field span{color:var(--muted,#5C574F);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.ds-field input{width:100%;padding:14px 0;border:0;border-bottom:1px solid var(--line,#CFC8BD);border-radius:0;background:transparent;color:inherit;font:400 16px/1.65 Manrope,sans-serif;caret-color:var(--accent,#FF8800)}.ds-field input:focus-visible{outline:2px solid var(--accent,#FF8800);outline-offset:4px}.ds-field input::placeholder{color:var(--muted,#5C574F)}"
+    },
+    {
+      "name": "Primary Navigation Link",
+      "kind": "nav",
+      "description": "Compact uppercase route label with a drawn registration line for active and hover states.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">SERVICES</a>",
+      "css": ".ds-nav-link{position:relative;color:var(--ink,#12100E);font:700 12px/1.2 Manrope,sans-serif;letter-spacing:.04em;text-decoration:none;text-transform:uppercase}.ds-nav-link::after{content:'';position:absolute;left:0;right:100%;bottom:-9px;height:2px;background:var(--accent,#FF8800);transition:right 220ms ease}.ds-nav-link:hover::after,.ds-nav-link:focus-visible::after{right:0}.ds-nav-link:focus-visible{outline:2px solid var(--accent,#FF8800);outline-offset:4px}"
+    },
+    {
+      "name": "Requirement Ticket",
+      "kind": "custom",
+      "description": "Signature clipped paper intake surface with plain-language requirement prompts.",
+      "html": "<section class=\"ds-ticket\"><span>REQUIREMENT INTAKE</span><a href=\"#\">What needs to change?</a><a href=\"#\">Where does work slow down?</a><a href=\"#\">What should run without you?</a></section>",
+      "css": ".ds-ticket{width:min(560px,90vw);padding:16px 60px 18px 24px;background:var(--ticket-paper,#FFFAF0);color:var(--ink,#12100E);clip-path:polygon(0 0,91% 0,100% 50%,91% 100%,0 100%);filter:drop-shadow(0 14px 18px rgba(18,16,14,.16));font-family:Manrope,sans-serif}.ds-ticket>span{display:block;margin-bottom:6px;color:var(--accent,#FF8800);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.ds-ticket a{display:flex;align-items:center;min-height:42px;border-top:1px solid var(--line,#CFC8BD);color:inherit;font-size:13px;font-weight:700;text-decoration:none}.ds-ticket a:focus-visible{outline:2px solid var(--accent,#FF8800);outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Digital Pattern Room",
+    "overview": "Codizzz looks and behaves like a modern fabrication studio for digital systems. Warm paper, graphite surfaces, cutting-table photography, measured contours and registration marks express that each product is shaped around a real operational need. The system is editorial rather than dashboard-like, and physical material appears through real raster photography and clipped paper rather than simulated effects.",
+    "keyCharacteristics": [
+      "Theme-aware identity with the exact orange mark in light mode and exact red mark in dark mode.",
+      "Condensed industrial display typography paired with neutral, highly readable body text.",
+      "Square controls, clipped paper silhouettes, measured rules and restrained registration marks.",
+      "One active accent per theme and no fabricated proof devices.",
+      "Physical, purposeful motion that draws relationships rather than decorating sections."
+    ],
+    "rules": [
+      { "name": "The One Registration Color Rule", "body": "Orange belongs only to light mode and red only to dark mode. Never show both active accents in the same interface state.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Barlow Condensed carries statements; Manrope carries meaning and action. Do not introduce a third display or technical costume font.", "section": "typography" },
+      { "name": "The Fitted Sequence Rule", "body": "Responsive layouts preserve the reading order and reflow the composition instead of shrinking the desktop canvas.", "section": "layout" },
+      { "name": "The Material Before Shadow Rule", "body": "Prefer overlap, rules and surface temperature. Add a shadow only when it clarifies a real foreground layer.", "section": "elevation" },
+      { "name": "The Cut, Not Rounded Rule", "body": "Use clipped or ruled geometry when a surface needs character. Do not replace the system with rounded SaaS cards or pill-shaped containers.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do use the exact supplied orange logo asset in light mode and exact supplied red logo asset in dark mode.",
+      "Do use real photography when physical material is part of the concept.",
+      "Do preserve square controls, single rules and plain-language actions.",
+      "Do respect reduced-motion preferences and keep the default content visible without JavaScript."
+    ],
+    "donts": [
+      "Don't mix orange and red accents in one theme state or recolor the supplied logo geometry.",
+      "Don't add fake statistics, testimonials, client logos, awards, ratings or availability claims.",
+      "Don't use emoji, Unicode glyphs, generic glow, glass cards, gradient text or purple AI palettes.",
+      "Don't turn sections into same-size rounded icon cards or bento scaffolds."
+    ]
+  }
+}

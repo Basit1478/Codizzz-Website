@@ -1,33 +1,36 @@
-import Navbar from "@/components/Navbar";
-import Services from "@/components/Services";
-import Process from "@/components/Process";
-import CTABanner from "@/components/CTABanner";
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
+import MotionRig from "@/components/MotionRig";
+import Navbar from "@/components/Navbar";
+import { InteriorHero, services, StudioCta } from "@/components/StudioSections";
+import { ArrowIcon, ServiceIcon } from "@/components/StudioIcons";
+import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Services",
-  description:
-    "Explore Codizzz services: AI Development, AI Agents, AI Digital Employees, Full Stack Web Apps, Mobile App Development, Graphic Design, AI Video Editing, and MS Office Automation.",
-  alternates: {
-    canonical: "https://codizzz.com/services",
-  },
-  openGraph: {
-    title: "Services | Codizzz AI Solutions Agency",
-    description:
-      "From AI Agents to Full Stack Apps — explore all 8 services offered by Codizzz for businesses worldwide.",
-    url: "https://codizzz.com/services",
-  },
+  description: "AI agents, automation, Digital FTEs, custom software, mobile apps and web platforms built around your operation.",
 };
 
 export default function ServicesPage() {
   return (
     <main>
-      <Navbar />
-      <div className="pt-20" style={{ background: "var(--bg-1)" }} />
-      <Services />
-      <Process />
-      <CTABanner />
-      <Footer />
+      <MotionRig /><Navbar />
+      <InteriorHero title="The right build starts with the right need." body="We combine product thinking, AI and software engineering to create systems that fit the people and processes already inside your business." />
+      <section className="service-index section-shell" data-reveal>
+        {services.map((service) => (
+          <article id={service.type} key={service.title}>
+            <ServiceIcon type={service.type} />
+            <h2>{service.title}</h2>
+            <p>{service.short}</p>
+            <Link href={`/contact?service=${encodeURIComponent(service.title)}`} aria-label={`Discuss ${service.title}`}>Discuss this build <ArrowIcon /></Link>
+          </article>
+        ))}
+      </section>
+      <section className="fit-check section-shell" data-reveal>
+        <h2>Not sure which service fits?</h2>
+        <p>That is a useful place to begin. Bring us the bottleneck, desired outcome or unfinished idea. We will help identify the right product shape before defining the build.</p>
+      </section>
+      <StudioCta /><Footer />
     </main>
   );
 }

@@ -1,0 +1,13 @@
+{
+  "approved": true,
+  "approvedBy": "user",
+  "selection": "Option C — Crafted Around Your Need",
+  "surface": "src/app/page.tsx",
+  "image": ".impeccable/mocks/home-approved.png",
+  "prompt": "Approved Digital Pattern Room homepage comp. Exact orange Codizzz mark on a warm light ground, oversized compressed headline, human fabrication-table photography, overlapping requirement ticket, restrained orange cut-line path, and a six-service horizontal ribbon. No fake statistics, testimonials, client marks, awards, ratings, dates, or performance claims.",
+  "doNotLiteralize": [
+    "Do not present the physical paper pattern as a software feature or literal delivery process.",
+    "Do not turn the numbered marks into fabricated metrics or project evidence.",
+    "Do not reproduce tiny image-generated text that is not part of confirmed product truth."
+  ]
+}
