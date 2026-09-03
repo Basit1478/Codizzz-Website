@@ -61,10 +61,21 @@ const organization = {
   serviceType: ["AI Agents", "Automation", "Digital FTE", "Custom Software", "Mobile App Development", "Custom Web Development"],
 };
 
+const themeScript = `
+  try {
+    var savedTheme = localStorage.getItem('codizzz-theme');
+    var theme = savedTheme === 'dark' || savedTheme === 'light'
+      ? savedTheme
+      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = theme;
+  } catch (_) {}
+`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" data-theme="light" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
       </head>
       <body>

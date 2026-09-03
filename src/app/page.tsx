@@ -4,6 +4,9 @@ import { FounderSection, ServicesRibbon, StudioCta, StudioProcess } from "@/comp
 import { ArrowIcon } from "@/components/StudioIcons";
 import MotionRig from "@/components/MotionRig";
 import Link from "next/link";
+import HeroExperience from "@/components/HeroExperience";
+import KineticHeadline from "@/components/KineticHeadline";
+import MagneticLink from "@/components/MagneticLink";
 
 export default function Home() {
   return (
@@ -12,32 +15,24 @@ export default function Home() {
       <Navbar />
       <section className="pattern-hero" aria-labelledby="home-title">
         <div className="pattern-hero__copy">
-          <h1 id="home-title" data-hero-title>
-            Your need.<br />Engineered into<br />a digital product.
-          </h1>
+          <div className="hero-kicker" aria-hidden="true">
+            <span>COD / 001</span>
+            <span>Digital systems / built to fit</span>
+          </div>
+          <KineticHeadline />
           <p>
             Codizzz designs AI systems, automation and custom software around
             the way your business actually works.
           </p>
           <div className="action-row">
-            <Link className="button button--solid" href="/contact">
-              Start a build <ArrowIcon />
-            </Link>
+            <MagneticLink className="button--solid" href="/contact" label="Start a build" />
             <Link className="text-link" href="/services">
               Explore services <ArrowIcon />
             </Link>
           </div>
         </div>
 
-        <div className="fabrication-frame" data-hero-media>
-          <div className="fabrication-frame__image" role="img" aria-label="A digital product engineer designing connected software workflows in a modern studio" />
-          <svg className="cut-path" viewBox="0 0 800 430" aria-hidden="true">
-            <path data-cut-path pathLength="1" d="M250 314h58l38-54h112l44-95h111l39 45h92" />
-          </svg>
-          <span className="fabrication-note fabrication-note--need">Need</span>
-          <span className="fabrication-note fabrication-note--workflow">Workflow</span>
-          <span className="fabrication-note fabrication-note--outcome">Outcome</span>
-        </div>
+        <HeroExperience />
 
         <aside className="requirement-ticket" aria-label="Requirement starter">
           <span className="ticket-label">Requirement intake</span>

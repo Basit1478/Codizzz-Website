@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon, ServiceIcon } from "./StudioIcons";
+import MagneticLink from "./MagneticLink";
 
 export const services = [
   { type: "agent", title: "AI Agents", short: "Agents that reason, coordinate tools and carry work forward with human oversight." },
@@ -40,7 +41,7 @@ export function StudioProcess() {
       <ol className="process-list">
         {steps.map((step, index) => (
           <li key={step.title}>
-            <span>{String(index + 1).padStart(2, "0")}</span>
+            <span>[{String(index + 1).padStart(2, "0")}]</span>
             <h3>{step.title}</h3>
             <p>{step.copy}</p>
           </li>
@@ -139,7 +140,7 @@ export function StudioCta() {
   return (
     <section className="studio-cta section-shell" data-reveal>
       <h2>Bring us the need.<br />We will shape the build.</h2>
-      <Link className="button button--solid" href="/contact">Start a conversation <ArrowIcon /></Link>
+      <MagneticLink className="button--solid" href="/contact" label="Start a conversation" />
     </section>
   );
 }

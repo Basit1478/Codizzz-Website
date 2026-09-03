@@ -4,7 +4,7 @@ description: A measured, fabrication-led system for digital products built aroun
 colors:
   accent-light: "#FF8800"
   accent-dark: "#E72700"
-  paper: "#F5F2EB"
+  paper: "#F7F4EE"
   paper-deep: "#EBE6DC"
   ink: "#12100E"
   muted: "#5C574F"
@@ -59,7 +59,7 @@ components:
     height: "48px"
   button-primary-dark:
     backgroundColor: "{colors.accent-dark}"
-    textColor: "{colors.paper}"
+    textColor: "#000000"
     typography: "{typography.label}"
     rounded: "{rounded.square}"
     padding: "12.8px 20px"
@@ -80,7 +80,7 @@ components:
 
 Codizzz looks and behaves like a modern fabrication studio for digital systems. Warm paper, graphite surfaces, cutting-table photography, measured contours and registration marks express that each product is shaped around a real operational need. The system is experimental enough to be memorable, but its hierarchy, copy and controls remain direct and trustworthy.
 
-The interface is editorial rather than dashboard-like. Large compressed statements establish the point of view, neutral body copy explains the work, and thin rules organize information without turning every section into a card. Physical material appears through real raster photography and the clipped intake ticket, not simulated bevels or decorative technical noise.
+The interface is editorial rather than dashboard-like. Large compressed statements establish the point of view, neutral body copy explains the work, and thin rules organize information without turning every section into a card. Physical material appears through real raster photography, the clipped intake ticket and an extremely subtle global grain layer, not simulated bevels.
 
 **Key Characteristics:**
 
@@ -88,7 +88,7 @@ The interface is editorial rather than dashboard-like. Large compressed statemen
 - Condensed industrial display typography paired with neutral, highly readable body text.
 - Square controls, clipped paper silhouettes, measured rules and restrained registration marks.
 - One active accent per theme and no fabricated proof devices.
-- Physical, purposeful motion that draws relationships rather than decorating sections.
+- Physical, purposeful motion that draws relationships: line-mask type reveals, magnetic actions and a pointer-responsive system map.
 
 ## Colors
 
@@ -128,7 +128,7 @@ The palette uses warm paper and graphite neutrals, with a single high-energy reg
 - **Body** (400, 1rem, 1.65 line-height): explanations and form content, generally constrained to 65–75 characters per line.
 - **Label** (800, 0.75rem, 0.04em tracking): short uppercase controls, navigation and measurement labels.
 
-**The Two-Voice Rule.** Barlow Condensed carries statements; Manrope carries meaning and action. Do not introduce a third display or technical costume font.
+**The Two-Voice Rule.** Barlow Condensed carries statements; Manrope carries meaning and action. A system monospace is reserved for terse coordinates, node indexes and machine readouts, never narrative copy.
 
 **The Heading Carries It Rule.** Sections begin with their actual heading. Do not add eyebrow or kicker text above it.
 
@@ -158,7 +158,7 @@ Controls, fields and navigation are square. The signature silhouette is the asym
 
 - **Shape:** square and rectangular (`0px` radius), with a minimum 44px target.
 - **Primary:** solid theme accent, high-contrast theme text, uppercase label and a directional arrow.
-- **Hover / Focus:** a restrained 2px upward movement on hover and a 2px theme-accent focus ring with 4px offset.
+- **Hover / Focus:** a spring-based magnetic pull with a directional label swap; keyboard focus keeps a 2px theme-accent ring with 4px offset.
 - **Text action:** transparent, underlined with the active accent, with the arrow moving horizontally on hover.
 
 ### Inputs / Fields
@@ -169,7 +169,11 @@ Controls, fields and navigation are square. The signature silhouette is the asym
 
 ### Navigation
 
-The header is a warm, nearly opaque theme surface divided by a single bottom rule. Labels are compact uppercase Manrope. Active and hover states draw a short accent registration line beneath the label. Mobile navigation opens as a full-width ruled field below the header.
+The header begins as a warm, nearly opaque theme surface divided by a single bottom rule. Once the page moves, it gains a restrained blurred backdrop without changing height. Labels are compact uppercase Manrope. Active and hover states draw a short accent registration line beneath the label. Mobile navigation opens as a full-width ruled field below the header.
+
+### Interactive System Map
+
+The hero photograph fades into the page through a long horizontal mask rather than a hard image edge. Need, Workflow and Outcome are focusable HUD nodes joined by a vector route with a moving data pulse. Pointer movement creates shallow opposing parallax between the photograph and the interface layer; reduced-motion mode disables both the parallax and the repeating pulse.
 
 ### Requirement Ticket
 
@@ -193,6 +197,6 @@ Six exact service names appear in a ruled horizontal index with consistent 1.6px
 
 - **Don't** mix orange and red accents in one theme state or recolor the supplied logo geometry.
 - **Don't** add fake statistics, testimonials, client logos, awards, ratings or availability claims.
-- **Don't** use emoji, Unicode glyphs, generic glow, glass cards, gradient text or purple AI palettes.
+- **Don't** use emoji, Unicode glyphs, generic glow, stacks of glass cards, gradient text or purple AI palettes. The single glass header and functional node glow are the only exceptions.
 - **Don't** turn sections into same-size rounded icon cards or bento scaffolds.
-- **Don't** imitate physical material with bevels, embossing or decorative technical noise.
+- **Don't** imitate physical material with bevels, embossing or loud decorative technical noise; global grain must remain below 0.03 opacity.

@@ -1,0 +1,16 @@
+
+> codizzz-agency@0.1.0 dev
+> next dev --port 57514
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:57514
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 7s
+ ○ Compiling / ...
+ ✓ Compiled / in 25.4s (1412 modules)
+ ✓ Compiled in 2.5s (695 modules)
+ GET / 200 in 28069ms
+ GET / 200 in 320ms
+ GET / 200 in 434ms
