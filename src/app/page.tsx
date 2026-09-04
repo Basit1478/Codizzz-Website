@@ -1,12 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { FounderSection, ServicesRibbon, StudioCta, StudioProcess } from "@/components/StudioSections";
+import { FounderSection, StudioCta, StudioProcess } from "@/components/StudioSections";
 import { ArrowIcon } from "@/components/StudioIcons";
 import MotionRig from "@/components/MotionRig";
 import Link from "next/link";
 import HeroExperience from "@/components/HeroExperience";
 import KineticHeadline from "@/components/KineticHeadline";
 import MagneticLink from "@/components/MagneticLink";
+import ServicesRibbon from "@/components/ServicesRibbon";
 
 export default function Home() {
   return (

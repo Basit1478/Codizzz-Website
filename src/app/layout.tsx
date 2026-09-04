@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow_Condensed, Manrope } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const display = Barlow_Condensed({
   subsets: ["latin"],
@@ -79,7 +80,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
       </head>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <WhatsAppWidget />
+        </ThemeProvider>
       </body>
     </html>
   );

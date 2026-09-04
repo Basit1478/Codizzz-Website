@@ -1,10 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextRequest) {
-  const { name, email, service, message } = await req.json();
+const allowedServices = new Set([
+  "AI Agents",
+  "Automation",
+  "Digital FTE",
+  "Custom Software",
+  "Mobile App Development",
+  "Custom Web Development",
+]);
 
-  if (!name || !email || !service || !message) {
+export async function POST(req: NextRequest) {
+  const payload = await req.json().catch(() => null);
+  const { name, email, service, message } = payload ?? {};
+
+  if (![name, email, service, message].every((value) => typeof value === "string" && value.trim().length > 0)) {
     return NextResponse.json({ error: "All fields required" }, { status: 400 });
+  }
+
+  if (name.length > 120 || email.length > 254 || service.length > 80 || message.length > 5000) {
+    return NextResponse.json({ error: "One or more fields are too long" }, { status: 400 });
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return NextResponse.json({ error: "Enter a valid email address" }, { status: 400 });
+  }
+
+  if (!allowedServices.has(service)) {
+    return NextResponse.json({ error: "Select a valid service" }, { status: 400 });
+  }
+
+  if (!process.env.RESEND_API_KEY) {
+    console.error("Contact form is missing RESEND_API_KEY");
+    return NextResponse.json({ error: "Email delivery is not configured" }, { status: 503 });
   }
 
   const escapeHTML = (value: string) =>

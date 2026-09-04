@@ -1,0 +1,128 @@
+ ⚠ ./src/components/ContactForm.tsx
+Attempted import error: 'services' is not exported from './StudioSections' (imported as 'services').
+
+Import trace for requested module:
+./src/components/ContactForm.tsx
+
+./src/app/page.tsx
+Attempted import error: 'ServicesRibbon' is not exported from '@/components/StudioSections' (imported as 'ServicesRibbon').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/services/page.tsx
+Attempted import error: 'services' is not exported from '@/components/StudioSections' (imported as 'services').
+
+Import trace for requested module:
+./src/app/services/page.tsx
+ ⚠ ./src/components/ContactForm.tsx
+Attempted import error: 'services' is not exported from './StudioSections' (imported as 'services').
+
+Import trace for requested module:
+./src/components/ContactForm.tsx
+
+./src/app/page.tsx
+Attempted import error: 'ServicesRibbon' is not exported from '@/components/StudioSections' (imported as 'ServicesRibbon').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/services/page.tsx
+Attempted import error: 'services' is not exported from '@/components/StudioSections' (imported as 'services').
+
+Import trace for requested module:
+./src/app/services/page.tsx
+ ⚠ ./src/app/page.tsx
+Attempted import error: 'ServicesRibbon' is not exported from '@/components/StudioSections' (imported as 'ServicesRibbon').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/services/page.tsx
+Attempted import error: 'services' is not exported from '@/components/StudioSections' (imported as 'services').
+
+Import trace for requested module:
+./src/app/services/page.tsx
+ ⨯ src\app\services\page.tsx (20:10) @ services
+ ⨯ TypeError: Cannot read properties of undefined (reading 'map')
+    at ServicesPage (./src/app/services/page.tsx:49:92)
+    at stringify (<anonymous>)
+digest: "599704186"
+[0m [90m 18 |[39m       [33m<[39m[33mInteriorHero[39m title[33m=[39m[32m"The right build starts with the right need."[39m body[33m=[39m[32m"We combine product thinking, AI and software engineering to create systems that fit the people and processes already inside your business."[39m [33m/[39m[33m>[39m[0m
+[0m [90m 19 |[39m       [33m<[39m[33msection[39m className[33m=[39m[32m"service-index section-shell"[39m data[33m-[39mreveal[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 20 |[39m         {services[33m.[39mmap((service) [33m=>[39m ([0m
+[0m [90m    |[39m          [31m[1m^[22m[39m[0m
+[0m [90m 21 |[39m           [33m<[39m[33marticle[39m id[33m=[39m{service[33m.[39mtype} key[33m=[39m{service[33m.[39mtitle}[33m>[39m[0m
+[0m [90m 22 |[39m             [33m<[39m[33mServiceIcon[39m type[33m=[39m{service[33m.[39mtype} [33m/[39m[33m>[39m[0m
+[0m [90m 23 |[39m             [33m<[39m[33mh2[39m[33m>[39m{service[33m.[39mtitle}[33m<[39m[33m/[39m[33mh2[39m[33m>[39m[0m
+ ⚠ ./src/app/services/page.tsx
+Attempted import error: 'services' is not exported from '@/components/StudioSections' (imported as 'services').
+
+Import trace for requested module:
+./src/app/services/page.tsx
+ ⨯ src\app\services\page.tsx (20:10) @ services
+ ⨯ TypeError: Cannot read properties of undefined (reading 'map')
+    at ServicesPage (./src/app/services/page.tsx:49:92)
+    at stringify (<anonymous>)
+digest: "599704186"
+[0m [90m 18 |[39m       [33m<[39m[33mInteriorHero[39m title[33m=[39m[32m"The right build starts with the right need."[39m body[33m=[39m[32m"We combine product thinking, AI and software engineering to create systems that fit the people and processes already inside your business."[39m [33m/[39m[33m>[39m[0m
+[0m [90m 19 |[39m       [33m<[39m[33msection[39m className[33m=[39m[32m"service-index section-shell"[39m data[33m-[39mreveal[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 20 |[39m         {services[33m.[39mmap((service) [33m=>[39m ([0m
+[0m [90m    |[39m          [31m[1m^[22m[39m[0m
+[0m [90m 21 |[39m           [33m<[39m[33marticle[39m id[33m=[39m{service[33m.[39mtype} key[33m=[39m{service[33m.[39mtitle}[33m>[39m[0m
+[0m [90m 22 |[39m             [33m<[39m[33mServiceIcon[39m type[33m=[39m{service[33m.[39mtype} [33m/[39m[33m>[39m[0m
+[0m [90m 23 |[39m             [33m<[39m[33mh2[39m[33m>[39m{service[33m.[39mtitle}[33m<[39m[33m/[39m[33mh2[39m[33m>[39m[0m
+ ⚠ ./src/app/services/page.tsx
+Attempted import error: 'services' is not exported from '@/components/StudioSections' (imported as 'services').
+
+Import trace for requested module:
+./src/app/services/page.tsx
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at loadManifest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-manifest.js:35:27)
+    at DevServer.getNextFontManifest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\next-server.js:745:47)
+    at DevServer.findPageComponents (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\dev\next-dev-server.js:571:43)
+    at async DevServer.renderPageComponent (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\base-server.js:1917:24)
+    at async DevServer.renderToResponseImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\base-server.js:1969:32)
+    at async DevServer.pipeImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\base-server.js:920:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\next-server.js:272:17)
+    at async DevServer.handleRequestImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  page: '/services'
+}
+ ⚠ ./src/app/services/page.tsx
+Attempted import error: 'services' is not exported from '@/components/StudioSections' (imported as 'services').
+
+Import trace for requested module:
+./src/app/services/page.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/contact/route' in C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/contact/route' in 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/contact/route (expected C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js)
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\cache\webpack\client-development\5.pack.gz_' -> 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\cache\webpack\client-development\5.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/contact/route' in C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/contact/route' in 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/contact/route (expected C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js)
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js

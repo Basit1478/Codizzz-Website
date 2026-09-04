@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import MotionRig from "@/components/MotionRig";
 import Navbar from "@/components/Navbar";
-import { InteriorHero, services, StudioCta } from "@/components/StudioSections";
+import { InteriorHero, StudioCta } from "@/components/StudioSections";
 import { ArrowIcon, ServiceIcon } from "@/components/StudioIcons";
+import { services } from "@/data/services";
 import Link from "next/link";
 
 export const metadata: Metadata = {

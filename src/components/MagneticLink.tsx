@@ -40,8 +40,7 @@ export default function MagneticLink({ href, label, className = "", icon }: Magn
     >
       <Link className={`button ${className}`.trim()} href={href} aria-label={label}>
         <span className="button__label-window" aria-hidden="true">
-          <span className="button__label-track">
-            <span>{label}</span>
+          <span className="button__label-track" data-label={label}>
             <span>{label}</span>
           </span>
         </span>

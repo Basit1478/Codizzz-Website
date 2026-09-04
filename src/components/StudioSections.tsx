@@ -1,29 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowIcon, ServiceIcon } from "./StudioIcons";
+import { ArrowIcon } from "./StudioIcons";
 import MagneticLink from "./MagneticLink";
-
-export const services = [
-  { type: "agent", title: "AI Agents", short: "Agents that reason, coordinate tools and carry work forward with human oversight." },
-  { type: "automation", title: "Automation", short: "Connected workflows that remove repetitive handoffs and manual operations." },
-  { type: "fte", title: "Digital FTE", short: "Dedicated digital teammates shaped around a defined operational role." },
-  { type: "software", title: "Custom Software", short: "Purpose-built systems designed around your process, data and business logic." },
-  { type: "mobile", title: "Mobile App Development", short: "Mobile products designed for the people and context in which they are used." },
-  { type: "web", title: "Custom Web Development", short: "Fast, responsive web platforms built around your audience and operation." },
-];
-
-export function ServicesRibbon() {
-  return (
-    <section className="services-ribbon" aria-label="Codizzz services">
-      {services.map((service) => (
-        <Link href={`/services#${service.type}`} key={service.title}>
-          <ServiceIcon type={service.type} />
-          <span>{service.title}</span>
-        </Link>
-      ))}
-    </section>
-  );
-}
 
 export function StudioProcess() {
   const steps = [

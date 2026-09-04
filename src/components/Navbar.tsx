@@ -7,7 +7,6 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 import BrandMark from "./BrandMark";
 import { MoonIcon, SunIcon } from "./StudioIcons";
 import { useTheme } from "./ThemeProvider";
-import MagneticLink from "./MagneticLink";
 
 const links = [
   { href: "/services", label: "Services" },
@@ -46,7 +45,6 @@ export default function Navbar() {
           <span className="theme-button__moon"><MoonIcon /></span>
           <span className="theme-button__sun"><SunIcon /></span>
         </button>
-        <MagneticLink className="button--compact" href="/contact" label="Start a build" />
         <button className={open ? "menu-button is-open" : "menu-button"} onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation">
           <span /><span />
         </button>
