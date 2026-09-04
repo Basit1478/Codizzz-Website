@@ -50,11 +50,6 @@ export default function HeroExperience() {
       />
 
       <motion.div className="hero-hud" style={reduceMotion ? undefined : { x: hudX, y: hudY }}>
-        <div className="hero-hud__meta">
-          <span>COD / SYSTEM MAP</span>
-          <span>[ 24°51&apos;N 67°00&apos;E / KHI ]</span>
-        </div>
-
         <svg className="cut-path" viewBox="0 0 800 430" aria-hidden="true">
           <path className="cut-path__base" d="M250 314h58l38-54h112l44-95h111l39 45h92" />
           <motion.path

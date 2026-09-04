@@ -11,8 +11,8 @@ export default function Footer() {
       </div>
       <div className="site-footer__links">
         <Link href="/services">Services</Link>
-        <Link href="/projects">Work</Link>
-        <Link href="/about">Team</Link>
+        <Link href="/work">Work</Link>
+        <Link href="/team">Team</Link>
         <Link href="/contact">Contact</Link>
       </div>
       <a className="site-footer__contact" href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com <ArrowIcon /></a>

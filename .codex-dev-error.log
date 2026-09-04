@@ -126,3 +126,88 @@ Import trace for requested module:
 <w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
 <w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
 <w>  at resolve commonjs C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/contact/route' in C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/contact/route' in 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/contact/route (expected C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js)
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/contact/route' in C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/contact/route' in 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/contact/route (expected C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js)
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/contact/route' in C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/contact/route' in 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/contact/route (expected C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js)
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+ ⨯ SyntaxError: Unexpected non-whitespace character after JSON at position 120 (line 5 column 2)
+    at JSON.parse (<anonymous>)
+    at loadManifest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-manifest.js:35:27)
+    at getMaybePagePath (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js:57:59)
+    at getPagePath (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js:92:22)
+    at requirePage (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js:99:22)
+    at C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js:98:84
+    at async loadComponentsImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js:98:26)
+    at async DevServer.findPageComponentsImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\next-server.js:710:36)
+    at async DevServer.findPageComponents (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\dev\next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\base-server.js:2097:30)
+    at async DevServer.pipeImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\base-server.js:920:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\next-server.js:231:21)
+    at async DevServer.handleRequestImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\lib\start-server.js:141:13)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/contact/route' in C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/contact/route' in 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/contact/route (expected C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js)
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\handle-externals.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\handle-externals.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/contact/route' in C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/contact/route' in 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/contact/route (expected C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api\contact\route.js)
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\server\app\api'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\cache\webpack\server-development\5.pack.gz_' -> 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\cache\webpack\server-development\5.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\cache\webpack\client-development\3.pack.gz_' -> 'C:\Users\Windows 10 Pro\Desktop\codizzz\Codizzz Website\.next\cache\webpack\client-development\3.pack.gz'

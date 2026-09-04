@@ -42,3 +42,53 @@
  GET / 200 in 1067ms
  GET / 200 in 135ms
  ✓ Compiled /_error in 2.5s (1629 modules)
+ ✓ Compiled in 7.3s (882 modules)
+ ✓ Compiled in 3.7s (1629 modules)
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 3.1s (1617 modules)
+ GET /projects 200 in 6747ms
+ GET /projects 200 in 536ms
+ ✓ Compiled in 26.8s (1631 modules)
+ ✓ Compiled in 960ms (882 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1440ms (1620 modules)
+ ✓ Compiled in 716ms (882 modules)
+ ✓ Compiled in 3.7s (1617 modules)
+ ✓ Compiled in 2.5s (1629 modules)
+ ✓ Compiled in 2.4s (1615 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1072ms (1618 modules)
+ ✓ Compiled in 571ms (884 modules)
+ ✓ Compiled in 3.3s (1618 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1364ms (1620 modules)
+ ✓ Compiled in 3.6s (1634 modules)
+ ✓ Compiled in 2.4s (1634 modules)
+ ○ Compiling /work ...
+ ✓ Compiled /work in 5.1s (1631 modules)
+ GET /work 200 in 6884ms
+ GET /work 200 in 119ms
+ GET /work 200 in 123ms
+ GET /work 200 in 161ms
+ GET /work 200 in 147ms
+ GET /work 200 in 337ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 6.4s (1626 modules)
+ GET /projects 308 in 7749ms
+ GET /work 200 in 2305ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 2.8s (1628 modules)
+ GET /about 308 in 4295ms
+ ○ Compiling /team ...
+ ✓ Compiled /team in 4.4s (1630 modules)
+ GET /team 200 in 6420ms
+ GET / 200 in 883ms
+ GET /work 200 in 533ms
+ ✓ Compiled in 5.3s (1640 modules)
+ ✓ Compiled in 3.9s (1640 modules)
+ ✓ Compiled in 5.1s (1640 modules)
+   Reload env: .env.local
+ ✓ Compiled in 6.3s (1626 modules)
+ GET / 200 in 1362ms
+ GET / 200 in 118ms
+ GET / 200 in 100ms

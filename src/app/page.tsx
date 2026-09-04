@@ -16,10 +16,6 @@ export default function Home() {
       <Navbar />
       <section className="pattern-hero" aria-labelledby="home-title">
         <div className="pattern-hero__copy">
-          <div className="hero-kicker" aria-hidden="true">
-            <span>COD / 001</span>
-            <span>Digital systems / built to fit</span>
-          </div>
           <KineticHeadline />
           <p>
             Codizzz designs AI systems, automation and custom software around
