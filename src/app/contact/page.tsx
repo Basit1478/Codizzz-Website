@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CalBooking from "@/components/CalBooking";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -20,6 +21,14 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="contact-layout__ticket"><ContactForm /></div>
+      </section>
+      <section className="booking-section" id="book-a-call" aria-labelledby="booking-title">
+        <div className="booking-section__intro">
+          <h2 id="booking-title">Book a conversation.</h2>
+          <p>Choose a 30-minute slot to talk through the need, workflow or product you have in mind.</p>
+          <a href="https://cal.com/team-codizzz/30min" target="_blank" rel="noreferrer">Open scheduler in a new tab</a>
+        </div>
+        <CalBooking />
       </section>
       <Footer />
     </main>

@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const COOLDOWN_MS = 5 * 60 * 1000;
+const submissionCooldowns = new Map<string, number>();
+
 const allowedServices = new Set([
   "AI Agents",
   "Automation",
@@ -29,10 +32,35 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Select a valid service" }, { status: 400 });
   }
 
+  const now = Date.now();
+  const cookieCooldownUntil = Number(req.cookies.get("codizzz_contact_cooldown")?.value ?? 0);
+  if (Number.isFinite(cookieCooldownUntil) && cookieCooldownUntil > now) {
+    const retryAfter = Math.ceil((cookieCooldownUntil - now) / 1000);
+    return NextResponse.json(
+      { error: "Please wait before sending another requirement", retryAfter },
+      { status: 429, headers: { "Retry-After": String(retryAfter) } },
+    );
+  }
+
+  const cooldownKey = email.trim().toLowerCase();
+  submissionCooldowns.forEach((expiresAt, key) => {
+    if (expiresAt <= now) submissionCooldowns.delete(key);
+  });
+  const cooldownUntil = submissionCooldowns.get(cooldownKey) ?? 0;
+  if (cooldownUntil > now) {
+    const retryAfter = Math.ceil((cooldownUntil - now) / 1000);
+    return NextResponse.json(
+      { error: "Please wait before sending another requirement", retryAfter },
+      { status: 429, headers: { "Retry-After": String(retryAfter) } },
+    );
+  }
+
   if (!process.env.RESEND_API_KEY) {
     console.error("Contact form is missing RESEND_API_KEY");
     return NextResponse.json({ error: "Email delivery is not configured" }, { status: 503 });
   }
+
+  submissionCooldowns.set(cooldownKey, now + COOLDOWN_MS);
 
   const escapeHTML = (value: string) =>
     value.replace(/[&<>'"]/g, (character) => ({
@@ -98,12 +126,24 @@ export async function POST(req: NextRequest) {
     if (!res.ok) {
       const err = await res.json();
       console.error("Resend error:", err);
+      submissionCooldowns.delete(cooldownKey);
       return NextResponse.json({ error: "Failed to send" }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true });
+    const response = NextResponse.json({ success: true, retryAfter: COOLDOWN_MS / 1000 });
+    response.cookies.set({
+      name: "codizzz_contact_cooldown",
+      value: String(Date.now() + COOLDOWN_MS),
+      httpOnly: true,
+      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production",
+      path: "/",
+      maxAge: COOLDOWN_MS / 1000,
+    });
+    return response;
   } catch (err) {
     console.error("Contact form error:", err);
+    submissionCooldowns.delete(cooldownKey);
     return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
   }
 }
