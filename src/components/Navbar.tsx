@@ -41,12 +41,19 @@ export default function Navbar() {
         <span className="site-status" aria-label="Codizzz studio location: Karachi, Pakistan">
           <i aria-hidden="true" /> KHI / PK
         </span>
-        <Link className="header-book-call" href="/contact#book-a-call" aria-label="Book a call" onClick={() => setOpen(false)}>
+        <a
+          className="header-book-call"
+          href="https://cal.com/team-codizzz/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Book a call on Cal.com (opens in a new tab)"
+          onClick={() => setOpen(false)}
+        >
           <span>Book a call</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
           </svg>
-        </Link>
+        </a>
         <button className="theme-button" onClick={toggle} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}>
           <span className="theme-button__moon"><MoonIcon /></span>
           <span className="theme-button__sun"><SunIcon /></span>

@@ -14,9 +14,10 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 900 }, { name: "
 
   await page.goto("http://127.0.0.1:57514/", { waitUntil: "networkidle" });
   const startBuildCount = await page.getByText("Start a build", { exact: true }).count();
-  const bookCallButton = page.getByRole("link", { name: "Book a call" });
+  const bookCallButton = page.getByRole("link", { name: /Book a call on Cal\.com/ });
   const bookCallVisible = await bookCallButton.isVisible();
   const bookCallHref = await bookCallButton.getAttribute("href");
+  const bookCallTarget = await bookCallButton.getAttribute("target");
   const widget = page.locator(".whatsapp-widget");
   const widgetVisible = await widget.isVisible();
   const widgetHref = await widget.getAttribute("href");
@@ -24,25 +25,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 900 }, { name: "
   await page.goto("http://127.0.0.1:57514/contact", { waitUntil: "networkidle" });
   const deliveryText = await page.locator(".contact-form__delivery").innerText();
   const directWhatsAppVisible = await page.getByRole("link", { name: /WhatsApp/ }).first().isVisible();
-  const calFrame = page.locator('.booking-calendar iframe[title="Book a call"]');
-  await calFrame.waitFor({ state: "attached", timeout: 30000 });
-  const calInline = page.locator(".booking-calendar cal-inline");
-  await calInline.waitFor({ state: "attached", timeout: 30000 });
-  await page.waitForFunction(() => {
-    const embed = document.querySelector(".booking-calendar cal-inline");
-    return embed?.getAttribute("loading") === "done" || embed?.getAttribute("loading") === "failed";
-  }, undefined, { timeout: 45000 });
-  const calLoadingState = await calInline.getAttribute("loading");
-  await page.waitForTimeout(5000);
-  const calFrameSrc = await calFrame.getAttribute("src");
-  const calContentFrame = page.frames().find((frame) => frame.url().includes("team-codizzz/30min"));
-  const calFrameText = calContentFrame ? (await calContentFrame.locator("body").innerText()).replace(/\s+/g, " ").trim().slice(0, 240) : "";
-  const calFrameMetrics = await calFrame.evaluate((frame) => {
-    const style = getComputedStyle(frame);
-    const rect = frame.getBoundingClientRect();
-    return { width: Math.round(rect.width), height: Math.round(rect.height), visibility: style.visibility, opacity: style.opacity };
-  });
-  await calFrame.screenshot({ path: `.impeccable/live/cal-${viewport.name}.png` });
+  const embeddedCalCount = await page.locator('.booking-calendar, cal-inline, iframe[src*="cal.com"]').count();
   await page.screenshot({ path: `.impeccable/live/contact-${viewport.name}.png`, fullPage: true });
 
   await page.route("**/api/contact", (route) => route.fulfill({
@@ -72,15 +55,12 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 900 }, { name: "
     startBuildCount,
     bookCallVisible,
     bookCallHref,
+    bookCallTarget,
     widgetVisible,
     widgetHref,
     deliveryText,
     directWhatsAppVisible,
-    calFrameAttached: await calFrame.count() === 1,
-    calLoadingState,
-    calFrameSrc,
-    calFrameText,
-    calFrameMetrics,
+    embeddedCalCount,
     successDialogVisible,
     cooldownButtonDisabled,
     cooldownButtonText,
@@ -94,17 +74,9 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 900 }, { name: "
   await page.close();
 }
 
-const darkPage = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-await darkPage.addInitScript(() => localStorage.setItem("codizzz-theme", "dark"));
-await darkPage.goto("http://127.0.0.1:57514/contact", { waitUntil: "networkidle" });
-const darkCalFrame = darkPage.locator('.booking-calendar iframe[title="Book a call"]');
-await darkCalFrame.waitFor({ state: "attached", timeout: 30000 });
-report.push({ darkTheme: await darkPage.evaluate(() => document.documentElement.dataset.theme), darkCalFrameSrc: await darkCalFrame.getAttribute("src") });
-await darkPage.close();
-
 const compactPage = await browser.newPage({ viewport: { width: 320, height: 740 } });
 await compactPage.goto("http://127.0.0.1:57514/", { waitUntil: "networkidle" });
-const compactButton = compactPage.getByRole("link", { name: "Book a call" });
+const compactButton = compactPage.getByRole("link", { name: /Book a call on Cal\.com/ });
 report.push({
   compactButtonVisible: await compactButton.isVisible(),
   compactButtonWidth: Math.round((await compactButton.boundingBox())?.width ?? 0),

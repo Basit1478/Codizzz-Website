@@ -298,11 +298,6 @@ html[data-theme="dark"] .contact-form option { color-scheme: dark; background-co
 .success-dialog__mark svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .success-dialog .button { margin-top: 0.65rem; }
 
-.booking-section { padding: clamp(4rem, 8vw, 8rem) 5vw; display: grid; grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1.45fr); gap: clamp(2.5rem, 6vw, 7rem); border-top: 1px solid var(--line); background: var(--paper); scroll-margin-top: 76px; }
-.booking-section__intro { align-self: start; position: sticky; top: 118px; }
-.booking-section__intro h2 { max-width: 560px; }
-.booking-section__intro p { max-width: 44ch; color: var(--muted); }
-.booking-section__intro a { display: inline-flex; min-height: 44px; align-items: center; margin-top: 1.5rem; color: var(--ink); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration-color: var(--accent); text-underline-offset: 0.35rem; }
 .booking-calendar { position: relative; min-width: 0; min-height: 720px; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper); color-scheme: light; }
 html[data-theme="dark"] .booking-calendar { color-scheme: dark; }
 .booking-calendar::before { content: "Loading available times…"; position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
@@ -325,8 +320,6 @@ html[data-theme="dark"] .booking-calendar { color-scheme: dark; }
   .menu-button { display: block; }
   .header-actions .magnetic-link { display: none; }
   .site-status { display: none; }
-  .booking-section { grid-template-columns: 1fr; }
-  .booking-section__intro { position: static; }
   .pattern-hero { min-height: auto; max-height: none; display: grid; grid-template-columns: 0.9fr 1.1fr; overflow: visible; }
   .pattern-hero__copy { width: auto; min-height: 600px; padding: 4rem 3vw 11rem 4vw; background: var(--paper); }
   .kinetic-headline { font-size: clamp(3.8rem, 8vw, 5.3rem); }
@@ -389,7 +382,6 @@ html[data-theme="dark"] .booking-calendar { color-scheme: dark; }
   .contact-layout__ticket { padding: 4rem 20px; }
   .contact-form { grid-template-columns: 1fr; }
   .contact-form__wide { grid-column: 1; }
-  .booking-section { padding-inline: 20px; }
   .booking-calendar, .booking-calendar__embed { min-height: 780px; }
 
   .header-book-call { min-height: 40px; padding-inline: 0.85rem; font-size: 0.69rem; }
