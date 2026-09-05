@@ -14,13 +14,13 @@ const allowedServices = new Set([
 
 export async function POST(req: NextRequest) {
   const payload = await req.json().catch(() => null);
-  const { name, email, service, message } = payload ?? {};
+  const { name, email, company = "", service, message } = payload ?? {};
 
   if (![name, email, service, message].every((value) => typeof value === "string" && value.trim().length > 0)) {
     return NextResponse.json({ error: "All fields required" }, { status: 400 });
   }
 
-  if (name.length > 120 || email.length > 254 || service.length > 80 || message.length > 5000) {
+  if (name.length > 120 || email.length > 254 || typeof company !== "string" || company.length > 160 || service.length > 80 || message.length > 5000) {
     return NextResponse.json({ error: "One or more fields are too long" }, { status: 400 });
   }
 
@@ -68,6 +68,7 @@ export async function POST(req: NextRequest) {
     })[character] ?? character);
   const safeName = escapeHTML(String(name));
   const safeEmail = escapeHTML(String(email));
+  const safeCompany = company.trim() ? escapeHTML(company.trim()) : "Not provided";
   const safeService = escapeHTML(String(service));
   const safeMessage = escapeHTML(String(message));
 
@@ -90,6 +91,10 @@ export async function POST(req: NextRequest) {
           <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
             <a href="mailto:${safeEmail}" style="color: #e72700; text-decoration: none; font-size: 14px;">${safeEmail}</a>
           </td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: #6b7280; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;">Company</td>
+          <td style="padding: 12px 0; border-bottom: 1px solid #3a3631; color: #f5f2eb; font-size: 14px;">${safeCompany}</td>
         </tr>
         <tr>
           <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: #6b7280; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;">Service</td>

@@ -91,17 +91,18 @@ export default function ContactForm() {
     <>
       <form className="contact-form" onSubmit={submit}>
         <fieldset disabled={state === "loading" || coolingDown}>
-          <label><span>Your name</span><input name="name" autoComplete="name" required maxLength={120} placeholder="Name" /></label>
-          <label><span>Email address</span><input name="email" type="email" autoComplete="email" required maxLength={254} placeholder="you@company.com" /></label>
+          <label><span>Name</span><input name="name" autoComplete="name" required maxLength={120} placeholder="Your name" /></label>
+          <label><span>Email</span><input name="email" type="email" autoComplete="email" required maxLength={254} placeholder="you@company.com" /></label>
+          <label><span>Company <small>Optional</small></span><input name="company" autoComplete="organization" maxLength={160} placeholder="Company name" /></label>
           <label><span>What kind of build?</span><select name="service" required defaultValue=""><option value="" disabled>Select a service</option>{services.map((service) => <option key={service.title}>{service.title}</option>)}</select></label>
-          <label className="contact-form__wide"><span>What needs to change?</span><textarea name="message" required maxLength={5000} rows={6} placeholder="Tell us where work slows down, what needs to connect, or what you want to build." /></label>
+          <label><span>What can we help you with?</span><textarea name="message" required maxLength={5000} rows={5} placeholder="Tell us where work slows down, what needs to connect, or what you want to build." /></label>
         </fieldset>
         {state === "error" && <p className="form-error" role="alert">The form could not be sent. Email <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a> or <a href="https://wa.me/923332011256" target="_blank" rel="noreferrer">message us on WhatsApp</a>.</p>}
         {coolingDown && <p className="form-cooldown contact-form__wide" role="status">Requirement received. You can send another in <strong>{formatRemaining(remaining)}</strong>.</p>}
-        <button className="button button--solid contact-form__wide" disabled={state === "loading" || coolingDown}>
+        <button className="button button--solid" disabled={state === "loading" || coolingDown}>
           {state === "loading" ? "Sending requirement…" : coolingDown ? `Send again in ${formatRemaining(remaining)}` : <>Send requirement <ArrowIcon /></>}
         </button>
-        <p className="contact-form__delivery contact-form__wide">Form submissions go to <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a></p>
+        <p className="contact-form__delivery">Your information is used only to respond to your request. Submissions go to <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a>.</p>
       </form>
 
       <dialog ref={dialogRef} className="success-dialog" onClose={() => setSuccessOpen(false)} aria-labelledby="success-title">

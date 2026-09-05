@@ -9,17 +9,24 @@ export default function ContactPage() {
   return (
     <main>
       <Navbar />
-      <section className="contact-layout">
-        <div className="contact-layout__intro">
-          <h1>Bring us the need.</h1>
-          <p>Share the friction, workflow or product you are thinking about. You do not need a finished technical brief.</p>
-          <div className="contact-direct">
-            <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a>
-            <a href="https://wa.me/923332011256" target="_blank" rel="noreferrer">WhatsApp · +92 333 2011256</a>
-            <span>Karachi, Pakistan</span>
+      <section className="contact-section" aria-labelledby="contact-title">
+        <div className="contact-section__statement" aria-hidden="true">Let&apos;s build</div>
+        <div className="contact-section__frame">
+          <div className="contact-layout">
+            <div className="contact-layout__intro">
+              <div>
+                <h1 id="contact-title">Bring us<br />the need.</h1>
+                <p>Share the friction, workflow or product you are thinking about. You do not need a finished technical brief.</p>
+              </div>
+              <div className="contact-direct">
+                <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a>
+                <a href="https://wa.me/923332011256" target="_blank" rel="noreferrer">WhatsApp · +92 333 2011256</a>
+                <span>Karachi, Pakistan</span>
+              </div>
+            </div>
+            <div className="contact-layout__ticket"><ContactForm /></div>
           </div>
         </div>
-        <div className="contact-layout__ticket"><ContactForm /></div>
       </section>
       <Footer />
     </main>

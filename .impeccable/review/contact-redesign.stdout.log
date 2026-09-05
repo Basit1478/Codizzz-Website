@@ -1,0 +1,26 @@
+
+> codizzz-agency@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 9.7s
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 12.9s (1375 modules)
+ GET /contact 200 in 2352ms
+ ✓ Compiled in 1791ms (687 modules)
+ GET /contact 200 in 405ms
+ GET /contact 200 in 85ms
+ GET /contact 200 in 60ms
+ ○ Compiling / ...
+ ✓ Compiled / in 7.6s (1393 modules)
+ GET / 200 in 11167ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 4.7s (1396 modules)
+ GET /_next/static/css/app/layout.css?v=1788626438889 404 in 5388ms
+ GET /_next/static/chunks/main-app.js?v=1788626438889 404 in 5123ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 90ms
+ GET /_next/static/chunks/app/layout.js 404 in 58ms
