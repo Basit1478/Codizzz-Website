@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
-import MotionRig from "@/components/MotionRig";
 import Navbar from "@/components/Navbar";
 import { FounderSection, InteriorHero, StudioCta, TeamSection } from "@/components/StudioSections";
 
@@ -9,7 +8,7 @@ export const metadata: Metadata = { title: "Team", description: "Meet the founde
 export default function TeamPage() {
   return (
     <main>
-      <MotionRig /><Navbar />
+      <Navbar />
       <InteriorHero title="Founder-led. Need-first. Built to be useful." body="Codizzz is a digital product agency for organizations that need technology to fit their reality, not force them into somebody else’s template." />
       <FounderSection />
       <TeamSection />

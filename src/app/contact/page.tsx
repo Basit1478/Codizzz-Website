@@ -20,7 +20,7 @@ export default function ContactPage() {
               </div>
               <div className="contact-direct">
                 <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a>
-                <a href="https://wa.me/923332011256" target="_blank" rel="noreferrer">WhatsApp · +92 333 2011256</a>
+                <a href="https://wa.me/923703168969" target="_blank" rel="noreferrer">WhatsApp · +92 370 3168969</a>
                 <span>Karachi, Pakistan</span>
               </div>
             </div>

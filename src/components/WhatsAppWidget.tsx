@@ -1,4 +1,4 @@
-const whatsappUrl = "https://wa.me/923332011256?text=Hi%20Codizzz%2C%20I%20want%20to%20discuss%20a%20digital%20product.";
+const whatsappUrl = "https://wa.me/923703168969?text=Hi%20Codizzz%2C%20I%20want%20to%20discuss%20a%20digital%20product.";
 
 export default function WhatsAppWidget() {
   return (

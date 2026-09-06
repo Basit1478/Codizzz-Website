@@ -13,11 +13,13 @@ export default function Footer() {
         <Link href="/services">Services</Link>
         <Link href="/work">Work</Link>
         <Link href="/team">Team</Link>
+        <Link href="/careers">Careers</Link>
         <Link href="/contact">Contact</Link>
       </div>
       <a className="site-footer__contact" href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com <ArrowIcon /></a>
       <div className="site-footer__base">
         <span>© {new Date().getFullYear()} Codizzz</span>
+        <a href="https://x.com/basitali2405" target="_blank" rel="noreferrer">X · @basitali2405</a>
         <span>Karachi, Pakistan</span>
       </div>
     </footer>

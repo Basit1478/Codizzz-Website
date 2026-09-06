@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
-import MotionRig from "@/components/MotionRig";
 import Navbar from "@/components/Navbar";
 import { InteriorHero, StudioCta } from "@/components/StudioSections";
 import { ArrowIcon, ServiceIcon } from "@/components/StudioIcons";
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main>
-      <MotionRig /><Navbar />
+      <Navbar />
       <InteriorHero title="The right build starts with the right need." body="We combine product thinking, AI and software engineering to create systems that fit the people and processes already inside your business." />
       <section className="service-index section-shell" data-reveal>
         {services.map((service) => (

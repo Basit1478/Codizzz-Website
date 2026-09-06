@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Footer from "@/components/Footer";
-import MotionRig from "@/components/MotionRig";
 import Navbar from "@/components/Navbar";
 import { InteriorHero, StudioCta } from "@/components/StudioSections";
 import { ArrowIcon } from "@/components/StudioIcons";
@@ -28,7 +27,7 @@ const work = [
 export default function WorkPage() {
   return (
     <main>
-      <MotionRig /><Navbar />
+      <Navbar />
       <InteriorHero title="Selected work and public product experiments." body="A view into publicly accessible interfaces across business, commerce, hospitality and productivity." />
       <section className="work-index section-shell" data-reveal>
         {work.map((item) => (

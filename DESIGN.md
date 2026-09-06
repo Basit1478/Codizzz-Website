@@ -88,7 +88,7 @@ The interface is editorial rather than dashboard-like. Large compressed statemen
 - Condensed industrial display typography paired with neutral, highly readable body text.
 - Square controls, clipped paper silhouettes, measured rules and restrained registration marks.
 - One active accent per theme and no fabricated proof devices.
-- Physical, purposeful motion that draws relationships: line-mask type reveals, magnetic actions and a pointer-responsive system map.
+- Physical, purposeful motion that draws relationships: line-mask type reveals, magnetic actions and a pointer-responsive system map. A single root-level motion rig owns smooth scrolling and restrained section reveals across routes; surfaces opt in rather than creating their own scroll engines.
 
 ## Colors
 
@@ -182,6 +182,14 @@ The signature intake component uses a clipped right edge, a distinct warm paper 
 ### Service Ribbon
 
 Six exact service names appear in a ruled horizontal index with consistent 1.6px authored SVG icons. It closes the desktop first viewport and becomes a two-column matrix on mobile.
+
+### Global Motion Rig
+
+Smooth scrolling and ordinary section reveals are infrastructure, mounted once at the application root rather than recreated per route. A surface opts into the shared reveal by marking only meaningful editorial sections; the reveal travels upward by 24px while opacity settles from 0.86 to 1 over 0.8 seconds with an `expo.out` ease, triggers when the section reaches roughly 82% of the viewport, and runs once. Lenis supplies restrained wheel smoothing with a 1.05-second duration and stays synchronized with GSAP ScrollTrigger.
+
+**The One Scroll Engine Rule.** Never mount a second smooth-scroll instance inside a page or form. Route-specific interactions may compose with the global rig, but they do not compete with it.
+
+**The Readable Without Motion Rule.** When reduced motion is requested, the root rig exits before initializing Lenis or GSAP. Content remains in its final, readable layout with native scrolling.
 
 ## Do's and Don'ts
 

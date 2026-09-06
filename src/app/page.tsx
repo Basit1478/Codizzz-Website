@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FounderSection, StudioCta, StudioProcess } from "@/components/StudioSections";
 import { ArrowIcon } from "@/components/StudioIcons";
-import MotionRig from "@/components/MotionRig";
 import Link from "next/link";
 import HeroExperience from "@/components/HeroExperience";
 import KineticHeadline from "@/components/KineticHeadline";
@@ -12,7 +11,6 @@ import ServicesRibbon from "@/components/ServicesRibbon";
 export default function Home() {
   return (
     <main>
-      <MotionRig />
       <Navbar />
       <section className="pattern-hero" aria-labelledby="home-title">
         <div className="pattern-hero__copy">

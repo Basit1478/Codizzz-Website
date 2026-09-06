@@ -97,7 +97,7 @@ export default function ContactForm() {
           <label><span>What kind of build?</span><select name="service" required defaultValue=""><option value="" disabled>Select a service</option>{services.map((service) => <option key={service.title}>{service.title}</option>)}</select></label>
           <label><span>What can we help you with?</span><textarea name="message" required maxLength={5000} rows={5} placeholder="Tell us where work slows down, what needs to connect, or what you want to build." /></label>
         </fieldset>
-        {state === "error" && <p className="form-error" role="alert">The form could not be sent. Email <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a> or <a href="https://wa.me/923332011256" target="_blank" rel="noreferrer">message us on WhatsApp</a>.</p>}
+        {state === "error" && <p className="form-error" role="alert">The form could not be sent. Email <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a> or <a href="https://wa.me/923703168969" target="_blank" rel="noreferrer">message us on WhatsApp</a>.</p>}
         {coolingDown && <p className="form-cooldown contact-form__wide" role="status">Requirement received. You can send another in <strong>{formatRemaining(remaining)}</strong>.</p>}
         <button className="button button--solid" disabled={state === "loading" || coolingDown}>
           {state === "loading" ? "Sending requirement…" : coolingDown ? `Send again in ${formatRemaining(remaining)}` : <>Send requirement <ArrowIcon /></>}

@@ -41,9 +41,14 @@ export function FounderSection() {
           Basit Ali Baloch is the CEO and Founder of Codizzz. His work brings AI,
           software engineering and product design together around practical business needs.
         </p>
-        <a className="text-link" href="https://www.linkedin.com/in/basit-ali-baloch-738285253/" target="_blank" rel="noreferrer">
-          View Basit on LinkedIn <ArrowIcon />
-        </a>
+        <div className="action-row">
+          <a className="text-link" href="https://www.linkedin.com/in/basit-ali-baloch-738285253/" target="_blank" rel="noreferrer">
+            View Basit on LinkedIn <ArrowIcon />
+          </a>
+          <a className="text-link" href="https://x.com/basitali2405" target="_blank" rel="noreferrer">
+            Follow Basit on X <ArrowIcon />
+          </a>
+        </div>
       </div>
     </section>
   );

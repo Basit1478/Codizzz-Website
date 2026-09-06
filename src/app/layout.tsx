@@ -3,6 +3,7 @@ import { Barlow_Condensed, Manrope } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import MotionRig from "@/components/MotionRig";
 
 const display = Barlow_Condensed({
   subsets: ["latin"],
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <ThemeProvider>
+          <MotionRig />
           {children}
           <WhatsAppWidget />
         </ThemeProvider>
