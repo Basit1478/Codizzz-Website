@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Manrope } from "next/font/google";
+// Next.js loads this stylesheet at runtime; TypeScript has no declaration for CSS side-effect imports.
+// @ts-expect-error CSS modules are handled by Next.js.
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
