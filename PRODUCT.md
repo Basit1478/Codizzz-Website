@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Codizzz serves clients across industries and locations who need a digital product or automation tailored to a real business requirement. The audience can include startups, established businesses, teams, and individual operators; the defining factor is a concrete digital need rather than a single company size or geography.
+Codizzz serves clients across industries and locations who need a digital product or AI Automation tailored to a real business requirement. The audience can include startups, established businesses, teams, and individual operators; the defining factor is a concrete digital need rather than a single company size or geography.
 
 ## Product Purpose
 
@@ -16,7 +16,7 @@ Codizzz designs and builds useful digital products around each client's specific
 
 ## Positioning
 
-Codizzz is a need-led digital product partner: it translates a client's operational or product requirement into a tailored AI, automation, web, mobile, or software solution instead of selling a fixed off-the-shelf package.
+Codizzz is a need-led digital product partner: it translates a client's operational or product requirement into a tailored AI, AI Automation, web, mobile, or software solution instead of selling a fixed off-the-shelf package.
 
 ## Operating Context
 
@@ -27,7 +27,7 @@ Prospective clients arrive with a business problem, workflow bottleneck, product
 Confirmed primary services:
 
 - AI agents
-- Business automation
+- Business AI Automation
 - Digital FTEs (AI-powered digital employees)
 - Custom software development
 - Mobile app development

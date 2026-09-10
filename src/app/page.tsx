@@ -16,7 +16,7 @@ export default function Home() {
         <div className="pattern-hero__copy">
           <KineticHeadline />
           <p>
-            Codizzz designs AI systems, automation and custom software around
+            Codizzz designs AI systems, AI Automation and custom software around
             the way your business actually works.
           </p>
           <div className="action-row">
@@ -33,7 +33,7 @@ export default function Home() {
           <span className="ticket-label">Requirement intake</span>
           <Link href="/contact?need=change">What needs to change?<ArrowIcon /></Link>
           <Link href="/contact?need=friction">Where does work slow down?<ArrowIcon /></Link>
-          <Link href="/contact?need=automation">What should run without you?<ArrowIcon /></Link>
+          <Link href="/contact?need=AI Automation">What should run without you?<ArrowIcon /></Link>
         </aside>
       </section>
 

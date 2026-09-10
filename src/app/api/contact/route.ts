@@ -5,7 +5,7 @@ const submissionCooldowns = new Map<string, number>();
 
 const allowedServices = new Set([
   "AI Agents",
-  "Automation",
+  "AI Automation",
   "Digital FTE",
   "Custom Software",
   "Mobile App Development",

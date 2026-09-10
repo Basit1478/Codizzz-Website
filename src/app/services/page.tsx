@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "AI agents, automation, Digital FTEs, custom software, mobile apps and web platforms built around your operation.",
+  description: "AI agents, AI Automation, Digital FTEs, custom software, mobile apps and web platforms built around your operation.",
 };
 
 export default function ServicesPage() {

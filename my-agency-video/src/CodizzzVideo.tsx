@@ -312,7 +312,7 @@ const serviceItems = [
   {
     icon: "🤖",
     title: "AI Development",
-    desc: "Custom LLM apps, RAG systems, AI chatbots and automation pipelines.",
+    desc: "Custom LLM apps, RAG systems, AI chatbots and AI Automation pipelines.",
     color: GOLD,
   },
   {

@@ -8,7 +8,7 @@ import { careerRoles, getCareerRole } from "@/data/careers";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "Apply for a three-month internship in mobile app development, n8n automation or Python and FastAPI backend development at Codizzz.",
+  description: "Apply for a three-month internship in mobile app development, n8n AI Automation or Python and FastAPI backend development at Codizzz.",
 };
 
 export default function CareersPage({ searchParams }: { searchParams?: { role?: string } }) {

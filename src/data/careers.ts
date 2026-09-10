@@ -6,8 +6,8 @@ export const careerRoles = [
     description: "Help turn product requirements into reliable, polished mobile experiences.",
   },
   {
-    slug: "n8n-automation",
-    title: "n8n Automation",
+    slug: "n8n-AI Automation",
+    title: "n8n AI Automation",
     focus: "Workflows and integrations",
     description: "Design and build n8n workflows that connect tools and remove repetitive work.",
   },

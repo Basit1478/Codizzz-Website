@@ -59,7 +59,7 @@ const teamMembers = [
     name: "Umer Ali",
     role: "Co-founder & AI Engineer",
     image: "/brand/team-umer-ali.jpg",
-    summary: "Builds agentic products and full-stack experiences with a focus on dependable, practical automation.",
+    summary: "Builds agentic products and full-stack experiences with a focus on dependable, practical AI Automation.",
     skills: ["Next.js", "React", "Python", "TypeScript", "AI Agents", "Claude Code"],
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/umer-ali-a962252ba/" },

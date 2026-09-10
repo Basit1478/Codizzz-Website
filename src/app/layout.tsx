@@ -24,14 +24,14 @@ const baseUrl = "https://codizzz.com";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: { default: "Codizzz | Digital Products Built Around Your Need", template: "%s | Codizzz" },
-  description: "Codizzz builds AI agents, automation, Digital FTEs, custom software, mobile apps and web platforms around how your business works.",
+  description: "Codizzz builds AI agents, AI Automation, Digital FTEs, custom software, mobile apps and web platforms around how your business works.",
   alternates: { canonical: baseUrl },
   openGraph: {
     type: "website",
     url: baseUrl,
     siteName: "Codizzz",
     title: "Codizzz | Digital Products Built Around Your Need",
-    description: "AI, automation and custom software shaped around your business.",
+    description: "AI, AI Automation and custom software shaped around your business.",
   },
   icons: {
     icon: [
@@ -57,10 +57,10 @@ const organization = {
   name: "Codizzz",
   url: baseUrl,
   logo: `${baseUrl}/brand/codizzz-mark-orange.png`,
-  description: "A digital product agency building AI systems, automation and custom software.",
+  description: "A digital product agency building AI systems, AI Automation and custom software.",
   founder: { "@type": "Person", name: "Basit Ali Baloch", url: "https://www.linkedin.com/in/basit-ali-baloch-738285253/" },
   areaServed: "Worldwide",
-  serviceType: ["AI Agents", "Automation", "Digital FTE", "Custom Software", "Mobile App Development", "Custom Web Development"],
+  serviceType: ["AI Agents", "AI Automation", "Digital FTE", "Custom Software", "Mobile App Development", "Custom Web Development"],
 };
 
 const themeScript = `
