@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   creator: "Codizzz",
   publisher: "Codizzz",
   category: "technology",
+  verification: {google: "QBTu-zyUMc-sQnK1gxe9fFZKjDpGxhyPiwu7bh4_SdE"},
   alternates: {canonical: siteUrl},
   robots: {
     index: true,
