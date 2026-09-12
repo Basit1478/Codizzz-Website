@@ -5,11 +5,14 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ArrowIcon } from "@/components/StudioIcons";
 import { careerRoles, getCareerRole } from "@/data/careers";
+import {createPageMetadata} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Careers",
-  description: "Apply for a three-month internship in mobile app development, n8n AI Automation or Python and FastAPI backend development at Codizzz.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Careers & Internships",
+  description: "Apply for a three-month Codizzz internship in mobile app development, n8n AI Automation or Python and FastAPI backend development.",
+  path: "/careers",
+  keywords: ["software internships Karachi", "n8n internship", "FastAPI internship", "mobile app developer internship"],
+});
 
 export default function CareersPage({ searchParams }: { searchParams?: { role?: string } }) {
   const selectedRole = getCareerRole(searchParams?.role);

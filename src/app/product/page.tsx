@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { InteriorHero, StudioCta, StudioProcess } from "@/components/StudioSections";
+import {createPageMetadata} from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Product Process", description: "How Codizzz turns a business need into a useful digital product." };
+export const metadata: Metadata = createPageMetadata({
+  title: "Our Digital Product Process",
+  description: "See how Codizzz turns real business friction into a fitted digital product through discovery, system design, visible build passes and delivery.",
+  path: "/product",
+  keywords: ["digital product process", "software development process", "AI system design"],
+});
 
 export default function ProductPage() {
   return (

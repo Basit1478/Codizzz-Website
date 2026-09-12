@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import {createPageMetadata} from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Start a Build", description: "Tell Codizzz what needs to change in your business or what you want to build." };
+export const metadata: Metadata = createPageMetadata({
+  title: "Start an AI or Software Build",
+  description: "Tell Codizzz about the business friction, workflow or digital product you need. Start a conversation by form, email, WhatsApp or call.",
+  path: "/contact",
+  keywords: ["hire AI automation agency", "custom software quote", "contact Codizzz"],
+});
 
 export default function ContactPage() {
   return (

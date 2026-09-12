@@ -4,11 +4,14 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { InteriorHero, StudioCta } from "@/components/StudioSections";
 import { ArrowIcon } from "@/components/StudioIcons";
+import {createPageMetadata} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Work",
-  description: "Selected live websites and public product experiments from Codizzz.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Selected Digital Product Work",
+  description: "Explore selected websites, software products and digital experiences designed and developed by Codizzz for real business needs.",
+  path: "/work",
+  keywords: ["Codizzz portfolio", "web development portfolio", "custom software projects"],
+});
 
 const work = [
   { name: "Acmeem", type: "Corporate experience", detail: "A corporate presence connecting event management with strategic business consulting.", tools: "Live website · Public link", href: "https://acmeem.com/", image: "/brand/projects/acmeem.jpg" },

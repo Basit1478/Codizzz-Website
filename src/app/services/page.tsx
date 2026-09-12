@@ -5,11 +5,14 @@ import { InteriorHero, StudioCta } from "@/components/StudioSections";
 import { ArrowIcon, ServiceIcon } from "@/components/StudioIcons";
 import { services } from "@/data/services";
 import Link from "next/link";
+import {createPageMetadata} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description: "AI agents, AI Automation, Digital FTEs, custom software, mobile apps and web platforms built around your operation.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "AI Automation & Software Development Services",
+  description: "Explore Codizzz services: AI Agents, AI Automation, Digital FTEs, custom software, mobile app development and custom web development.",
+  path: "/services",
+  keywords: ["AI Automation services", "AI agent development", "n8n automation", "software development services"],
+});
 
 export default function ServicesPage() {
   return (

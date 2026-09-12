@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { FounderSection, InteriorHero, StudioCta, TeamSection } from "@/components/StudioSections";
+import {createPageMetadata} from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Team", description: "Meet the founder and team behind Codizzz and learn how we approach useful digital products." };
+export const metadata: Metadata = createPageMetadata({
+  title: "Founder & Team",
+  description: "Meet Basit Ali Baloch and the Codizzz team building useful AI systems, AI Automation and custom digital products from Karachi for clients worldwide.",
+  path: "/team",
+  keywords: ["Basit Ali Baloch", "Codizzz team", "Karachi digital product agency"],
+});
 
 export default function TeamPage() {
   return (
