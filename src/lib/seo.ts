@@ -47,7 +47,7 @@ export function createPageMetadata({title, description, path, keywords = []}: Pa
       title: socialTitle,
       description,
       images: ["/opengraph-image"],
-      creator: "@basitali2405",
+      creator: "@codizzz_AI",
     },
   };
 }

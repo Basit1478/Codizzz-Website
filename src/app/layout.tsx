@@ -5,7 +5,9 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import MotionRig from "@/components/MotionRig";
+import {services} from "@/data/services";
 import {defaultDescription, defaultTitle, siteName, siteUrl} from "@/lib/seo";
+import {socialLinks} from "@/lib/social";
 
 const display = Barlow_Condensed({
   subsets: ["latin"],
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description: defaultDescription,
     images: ["/opengraph-image"],
-    creator: "@basitali2405",
+    creator: "@codizzz_AI",
   },
   icons: {
     icon: [
@@ -84,14 +86,35 @@ const structuredData = {
       url: siteUrl,
       logo: `${siteUrl}/brand/codizzz-mark-orange.png`,
       description: defaultDescription,
+      slogan: "Your need. Engineered into a digital product.",
       email: "teamcodizzz@gmail.com",
       telephone: "+923703168969",
-      founder: {"@type": "Person", name: "Basit Ali Baloch", url: "https://www.linkedin.com/in/basit-ali-baloch-738285253/"},
+      founder: {
+        "@type": "Person",
+        "@id": `${siteUrl}/#founder`,
+        name: "Basit Ali Baloch",
+        url: `${siteUrl}/team`,
+        sameAs: ["https://www.linkedin.com/in/basit-ali-baloch-738285253/"],
+      },
       address: {"@type": "PostalAddress", addressLocality: "Karachi", addressCountry: "PK"},
       areaServed: "Worldwide",
-      sameAs: ["https://x.com/basitali2405", "https://www.linkedin.com/in/basit-ali-baloch-738285253/"],
+      sameAs: socialLinks.map(({href}) => href),
       knowsAbout: ["AI Agents", "AI Automation", "Digital FTE", "Custom Software", "Mobile App Development", "Custom Web Development"],
       contactPoint: {"@type": "ContactPoint", contactType: "sales", email: "teamcodizzz@gmail.com", telephone: "+923703168969", availableLanguage: ["English", "Urdu"]},
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Codizzz digital product services",
+        itemListElement: services.map(({title, short}) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: title,
+            description: short,
+            provider: {"@id": `${siteUrl}/#organization`},
+            areaServed: "Worldwide",
+          },
+        })),
+      },
     },
     {"@type": "WebSite", "@id": `${siteUrl}/#website`, url: siteUrl, name: siteName, publisher: {"@id": `${siteUrl}/#organization`}, inLanguage: "en"},
   ],

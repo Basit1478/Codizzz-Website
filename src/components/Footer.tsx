@@ -1,15 +1,7 @@
 import Link from "next/link";
+import { socialLinks, type SocialPlatform } from "@/lib/social";
 import BrandMark from "./BrandMark";
 import { ArrowIcon } from "./StudioIcons";
-
-type SocialPlatform = "linkedin" | "facebook" | "instagram" | "x";
-
-const socialLinks: Array<{ label: string; href: string; platform: SocialPlatform }> = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/codizzz/", platform: "linkedin" },
-  { label: "Facebook", href: "https://web.facebook.com/codizzz2026/", platform: "facebook" },
-  { label: "Instagram", href: "https://www.instagram.com/codi_zzz/", platform: "instagram" },
-  { label: "X", href: "https://x.com/codizzz_AI", platform: "x" },
-];
 
 function SocialIcon({ platform }: { platform: SocialPlatform }) {
   if (platform === "instagram") {
@@ -41,17 +33,6 @@ export default function Footer() {
       <div className="site-footer__lead">
         <BrandMark />
         <p>Digital products shaped around how your business works.</p>
-      </div>
-      <div className="site-footer__links">
-        <Link href="/services">Services</Link>
-        <Link href="/work">Work</Link>
-        <Link href="/team">Team</Link>
-        <Link href="/careers">Careers</Link>
-        <Link href="/contact">Contact</Link>
-      </div>
-      <a className="site-footer__contact" href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com <ArrowIcon /></a>
-      <div className="site-footer__base">
-        <span>© {new Date().getFullYear()} Codizzz</span>
         <nav className="site-footer__socials" aria-label="Codizzz social media">
           {socialLinks.map(({ label, href, platform }) => (
             <a
@@ -66,6 +47,17 @@ export default function Footer() {
             </a>
           ))}
         </nav>
+      </div>
+      <div className="site-footer__links">
+        <Link href="/services">Services</Link>
+        <Link href="/work">Work</Link>
+        <Link href="/team">Team</Link>
+        <Link href="/careers">Careers</Link>
+        <Link href="/contact">Contact</Link>
+      </div>
+      <a className="site-footer__contact" href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com <ArrowIcon /></a>
+      <div className="site-footer__base">
+        <span>© {new Date().getFullYear()} Codizzz</span>
         <span>Karachi, Pakistan</span>
       </div>
     </footer>
