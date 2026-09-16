@@ -32,6 +32,18 @@ ADMIN_EMAIL=teamcodizzz@gmail.com
 
 Redeploy after adding production environment variables. Visit `/admin`, sign in, and manage Services, Careers and Team content. Published changes are reflected on the public site; drafts remain visible only inside the admin panel.
 
+## Password recovery
+
+In Supabase, open **Authentication → URL Configuration** and add these redirect URLs for the built-in “Forgot password?” flow:
+
+```text
+https://codizzz.com/auth/callback
+https://www.codizzz.com/auth/callback
+http://localhost:3000/auth/callback
+```
+
+The recovery email sends the approved admin through `/auth/callback` to `/admin/reset-password`. The new password must contain at least 12 characters, and successful recovery signs out all active admin sessions.
+
 ## Images
 
 Team portraits accept JPG, PNG or WebP files up to 5 MB. A portrait is required before a team member can be published.

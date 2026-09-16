@@ -1,6 +1,6 @@
 .admin-shell, .admin-login-page, .admin-access-denied { min-height: 100dvh; background: var(--paper); color: var(--ink); font-family: var(--font-body); }
 .admin-shell { display: grid; grid-template-columns: 218px minmax(0, 1fr); }
-.admin-shell ~ .whatsapp-widget { display: none; }
+.admin-shell ~ .whatsapp-widget, .admin-login-page ~ .whatsapp-widget, .admin-access-denied ~ .whatsapp-widget { display: none; }
 .admin-rail { position: sticky; top: 0; height: 100dvh; padding: 28px 24px; display: flex; flex-direction: column; border-right: 1px solid var(--line); background: var(--paper); }
 .admin-brand { display: flex; align-items: center; gap: 8px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
 .admin-brand .brand-mark { min-width: 0; gap: 8px; pointer-events: auto; }
@@ -109,6 +109,7 @@
 .admin-login-form label { display: grid; gap: 8px; }
 .admin-login-form label span { color: var(--muted); font-size: 0.68rem; font-weight: 800; text-transform: uppercase; }
 .admin-login-form input { min-height: 50px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); font: inherit; }
+.admin-forgot-link { width: max-content; margin-top: 2px; color: var(--ink); font-size: 0.72rem; font-weight: 700; text-decoration-color: var(--accent); text-underline-offset: 4px; }
 .admin-notice { padding: 12px; border: 1px solid var(--accent); color: var(--ink) !important; font-size: 0.78rem; }
 .admin-back-link { width: max-content; margin-top: 4rem; color: var(--ink); font-size: 0.75rem; font-weight: 700; text-decoration-color: var(--accent); text-underline-offset: 4px; }
 .admin-login-aside { padding: 6vw; display: flex; flex-direction: column; justify-content: center; gap: 1.2rem; background: var(--paper-deep); font-family: var(--font-display); font-size: clamp(3rem, 7vw, 7rem); font-weight: 800; line-height: 0.8; text-transform: uppercase; }
