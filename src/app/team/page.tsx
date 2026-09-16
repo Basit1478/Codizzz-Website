@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { FounderSection, InteriorHero, StudioCta, TeamSection } from "@/components/StudioSections";
 import {createPageMetadata} from "@/lib/seo";
+import { getTeamMembers } from "@/lib/content";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Founder & Team",
@@ -11,13 +12,16 @@ export const metadata: Metadata = createPageMetadata({
   keywords: ["Basit Ali Baloch", "Codizzz team", "Karachi digital product agency"],
 });
 
-export default function TeamPage() {
+export const revalidate = 60;
+
+export default async function TeamPage() {
+  const members = await getTeamMembers();
   return (
     <main>
       <Navbar />
       <InteriorHero title="Founder-led. Need-first. Built to be useful." body="Codizzz is a digital product agency for organizations that need technology to fit their reality, not force them into somebody else’s template." />
       <FounderSection />
-      <TeamSection />
+      <TeamSection members={members} />
       <section className="principles section-shell" data-reveal>
         <h2>How we think about the work.</h2>
         <div>

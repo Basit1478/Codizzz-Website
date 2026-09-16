@@ -4,7 +4,7 @@ import CareerApplicationForm from "@/components/CareerApplicationForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ArrowIcon } from "@/components/StudioIcons";
-import { careerRoles, getCareerRole } from "@/data/careers";
+import { getCareerRole, getCareerRoles } from "@/lib/content";
 import {createPageMetadata} from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -14,8 +14,11 @@ export const metadata: Metadata = createPageMetadata({
   keywords: ["software internships Karachi", "n8n internship", "FastAPI internship", "mobile app developer internship"],
 });
 
-export default function CareersPage({ searchParams }: { searchParams?: { role?: string } }) {
-  const selectedRole = getCareerRole(searchParams?.role);
+export const revalidate = 60;
+
+export default async function CareersPage({ searchParams }: { searchParams?: { role?: string } }) {
+  const careerRoles = await getCareerRoles();
+  const selectedRole = await getCareerRole(searchParams?.role);
 
   return (
     <main>
@@ -36,7 +39,7 @@ export default function CareersPage({ searchParams }: { searchParams?: { role?: 
         <h2 id="open-roles-title">Open roles.</h2>
         <div className="career-list">
           {careerRoles.map((role) => (
-            <article key={role.slug} id={role.slug}>
+            <article key={role.id} id={role.slug}>
               <div className="career-list__role">
                 <h3>{role.title}</h3>
                 <span>{role.focus}</span>
@@ -60,7 +63,7 @@ export default function CareersPage({ searchParams }: { searchParams?: { role?: 
 
       {selectedRole ? (
         <section className="career-apply section-shell" id="apply" aria-labelledby="apply-title">
-          <CareerApplicationForm key={selectedRole.slug} initialRole={selectedRole.slug} />
+          <CareerApplicationForm key={selectedRole.slug} initialRole={selectedRole.slug} roles={careerRoles} />
         </section>
       ) : (
         <section className="career-prompt section-shell" id="apply" aria-labelledby="apply-prompt-title" data-reveal>

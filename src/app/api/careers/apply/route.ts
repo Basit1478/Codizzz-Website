@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
-import { getCareerRole } from "@/data/careers";
+import { getCareerRole } from "@/lib/content";
 
 export const runtime = "nodejs";
 
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
   const form = await request.formData().catch(() => null);
   if (!form) return NextResponse.json({ error: "Invalid application data." }, { status: 400 });
 
-  const role = getCareerRole(readText(form, "role"));
+  const role = await getCareerRole(readText(form, "role"));
   const name = readText(form, "name");
   const email = readText(form, "email");
   const phone = readText(form, "phone");

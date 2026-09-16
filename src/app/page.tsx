@@ -7,8 +7,12 @@ import HeroExperience from "@/components/HeroExperience";
 import KineticHeadline from "@/components/KineticHeadline";
 import MagneticLink from "@/components/MagneticLink";
 import ServicesRibbon from "@/components/ServicesRibbon";
+import { getServices } from "@/lib/content";
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  const services = await getServices();
   return (
     <main>
       <Navbar />
@@ -37,7 +41,7 @@ export default function Home() {
         </aside>
       </section>
 
-      <ServicesRibbon />
+      <ServicesRibbon services={services} />
 
       <section className="manifesto section-shell" data-reveal>
         <h2>We start with the friction inside your business.</h2>

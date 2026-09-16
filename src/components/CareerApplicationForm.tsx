@@ -2,19 +2,19 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { careerRoles, type CareerRoleSlug } from "@/data/careers";
+import type { CareerRole } from "@/types/content";
 import { ArrowIcon } from "./StudioIcons";
 
-type Props = { initialRole: CareerRoleSlug };
+type Props = { initialRole: string; roles: CareerRole[] };
 
-export default function CareerApplicationForm({ initialRole }: Props) {
-  const [selectedRole, setSelectedRole] = useState<CareerRoleSlug>(initialRole);
+export default function CareerApplicationForm({ initialRole, roles }: Props) {
+  const [selectedRole, setSelectedRole] = useState(initialRole);
   const [state, setState] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [successOpen, setSuccessOpen] = useState(false);
   const [fileName, setFileName] = useState("No file selected");
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const selectedRoleTitle = careerRoles.find((role) => role.slug === selectedRole)?.title ?? "this role";
+  const selectedRoleTitle = roles.find((role) => role.slug === selectedRole)?.title ?? "this role";
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -55,8 +55,8 @@ export default function CareerApplicationForm({ initialRole }: Props) {
         <fieldset disabled={state === "loading"}>
           <label>
             <span>Role</span>
-            <select name="role" value={selectedRole} onChange={(event) => setSelectedRole(event.target.value as CareerRoleSlug)} required>
-              {careerRoles.map((role) => <option key={role.slug} value={role.slug}>{role.title}</option>)}
+            <select name="role" value={selectedRole} onChange={(event) => setSelectedRole(event.target.value)} required>
+              {roles.map((role) => <option key={role.id} value={role.slug}>{role.title}</option>)}
             </select>
           </label>
           <div className="career-form__pair">

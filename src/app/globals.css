@@ -173,7 +173,10 @@ html[data-theme="dark"] .fabrication-frame__image { filter: saturate(0.62) contr
 .services-ribbon__group { display: flex; flex: 0 0 auto; }
 .services-ribbon a { width: clamp(220px, 18vw, 292px); min-height: 124px; padding: 1.6rem 1.35rem; display: flex; align-items: center; gap: 0.8rem; border-right: 1px solid var(--line); text-decoration: none; font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; line-height: 0.95; text-transform: uppercase; transition: color 200ms ease, background 200ms ease; }
 .services-ribbon a:hover, .services-ribbon a:focus-visible { color: var(--accent); background: var(--paper-deep); }
-.services-ribbon svg { flex: 0 0 auto; width: 34px; height: 34px; color: var(--accent); }
+.service-mark { flex: 0 0 auto; display: inline-grid; place-items: center; color: var(--accent); }
+.service-mark--preset svg { width: 100%; height: 100%; fill: none; stroke: currentColor; }
+.service-mark--custom { background-color: currentColor; -webkit-mask-position: center; mask-position: center; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-size: contain; mask-size: contain; transition: color 200ms ease, background-color 200ms ease; }
+.services-ribbon .service-mark { width: 34px; height: 34px; }
 
 @keyframes services-marquee {
   to { transform: translate3d(-50%, 0, 0); }
@@ -222,7 +225,7 @@ html[data-theme="dark"] .fabrication-frame__image { filter: saturate(0.62) contr
 .interior-hero__line span { position: absolute; left: 58%; top: -5px; width: 10px; height: 10px; background: var(--accent); }
 .service-index { padding-top: 0; padding-bottom: 0; }
 .service-index article { display: grid; grid-template-columns: 72px minmax(260px, 0.8fr) minmax(280px, 1fr) auto; gap: 2rem; align-items: center; min-height: 190px; border-bottom: 1px solid var(--line); }
-.service-index article > svg { width: 42px; height: 42px; color: var(--accent); fill: none; stroke: currentColor; }
+.service-index article > .service-mark { width: 42px; height: 42px; }
 .service-index h2, .service-index p { margin: 0; }
 .service-index h2 { font-size: clamp(2.2rem, 3.4vw, 4rem); }
 .service-index p { color: var(--muted); max-width: 58ch; }

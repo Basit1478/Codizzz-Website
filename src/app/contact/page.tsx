@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import {createPageMetadata} from "@/lib/seo";
+import { getServices } from "@/lib/content";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Start an AI or Software Build",
@@ -11,7 +12,10 @@ export const metadata: Metadata = createPageMetadata({
   keywords: ["hire AI automation agency", "custom software quote", "contact Codizzz"],
 });
 
-export default function ContactPage() {
+export const revalidate = 60;
+
+export default async function ContactPage() {
+  const services = await getServices();
   return (
     <main>
       <Navbar />
@@ -30,7 +34,7 @@ export default function ContactPage() {
                 <span>Karachi, Pakistan</span>
               </div>
             </div>
-            <div className="contact-layout__ticket"><ContactForm /></div>
+            <div className="contact-layout__ticket"><ContactForm services={services} /></div>
           </div>
         </div>
       </section>

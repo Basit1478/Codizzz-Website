@@ -1,0 +1,233 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-09-16T13:10:01.052Z",
+  "comp": ".impeccable/mocks/decision/admin-control-desk.webp",
+  "direction": null,
+  "breakpoint": "1536x1024",
+  "artifact": null,
+  "phase": "hero",
+  "phases": {
+    "comps": {
+      "status": "skipped",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [
+        {
+          "at": "2026-09-16T13:10:01.052Z",
+          "text": "started with an approved comp; the comp round happened before this state (surface round or manual)"
+        }
+      ],
+      "gate": null,
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-09-16T13:10:01.051Z",
+      "closedAt": "2026-09-16T13:12:03.201Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "19 regions, 0 plates, 13 text regions measured",
+        "at": "2026-09-16T13:12:03.200Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "closed",
+      "openedAt": "2026-09-16T13:12:03.201Z",
+      "closedAt": "2026-09-16T13:12:16.934Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no plates owed",
+        "at": "2026-09-16T13:12:16.934Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "open",
+      "openedAt": "2026-09-16T13:12:16.934Z",
+      "closedAt": null,
+      "attempts": 1,
+      "notes": [
+        {
+          "at": "2026-09-16T13:57:16.019Z",
+          "text": "Assigned concept was not user-selected and contained placeholder registry controls. Shipped the same control-desk direction with verified Codizzz brand typography, operational setup state, real CRUD fields, accessible contrast, and responsive layouts; evidence is in .impeccable/review/admin-*.png."
+        }
+      ],
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "region account-bar is missing (detail 0%, structure 71%): the comp shows material the build does not",
+          "region registry-filters is missing (detail 1%, structure 78%): the comp shows material the build does not",
+          "region sidebar-close is missing (detail 4%, structure 57%): the comp shows material the build does not",
+          "region workspace-footer is missing (detail 7%, structure 83%): the comp shows material the build does not",
+          "control sidebar-nav drifts to 61% (structure 72%, color 57%): its chrome differs from the comp's; open .impeccable/review/diff/hero/regions/sidebar-nav.png and match the border, fill, radius, chevron or arrow, and label size",
+          "control services-action drifts to 64% (structure 72%, color 70%): its chrome differs from the comp's; open .impeccable/review/diff/hero/regions/services-action.png and match the border, fill, radius, chevron or arrow, and label size",
+          "control careers-action drifts to 63% (structure 68%, color 71%): its chrome differs from the comp's; open .impeccable/review/diff/hero/regions/careers-action.png and match the border, fill, radius, chevron or arrow, and label size",
+          "control team-action drifts to 62% (structure 66%, color 69%): its chrome differs from the comp's; open .impeccable/review/diff/hero/regions/team-action.png and match the border, fill, radius, chevron or arrow, and label size",
+          "the build carries ink in 5 grid cells where the comp is calm (H1, C4, C8, C9, H9); nothing exists on the page that the comp does not show (a kicker, an extra nav item, a divider, a second row of controls); remove it or name it in a stated decision after the hero passes"
+        ],
+        "summary": "hero 76% (drift)",
+        "score": 0.7602,
+        "verdict": "drift",
+        "report": ".impeccable/review/diff/hero/report.json",
+        "sideBySide": "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/side-by-side.png",
+        "worst": [
+          "admin-label drift 40%",
+          "sidebar-brand drift 48%",
+          "sidebar-close missing 50%"
+        ],
+        "worstIds": [
+          "admin-label",
+          "sidebar-brand",
+          "sidebar-close"
+        ],
+        "worstCrops": [
+          {
+            "id": "admin-label",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.4015,
+              "structure": 0.3405,
+              "color": 0.6837,
+              "colorIntersection": 0.4724,
+              "paletteMatch": 0.7975,
+              "detail": 0.4019,
+              "detailRaw": 0.4488,
+              "detailAdded": 0.0938,
+              "bands": 0
+            },
+            "file": ".impeccable/review/diff/hero/regions/admin-label.png"
+          },
+          {
+            "id": "sidebar-brand",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.4777,
+              "structure": 0.3722,
+              "color": 0.7659,
+              "colorIntersection": 0.6028,
+              "paletteMatch": 0.8537,
+              "detail": 0.3627,
+              "detailRaw": 0.4356,
+              "detailAdded": 0.1458,
+              "bands": 0.4571
+            },
+            "file": ".impeccable/review/diff/hero/regions/sidebar-brand.png"
+          },
+          {
+            "id": "sidebar-close",
+            "verdict": "missing",
+            "score": {
+              "overall": 0.497,
+              "structure": 0.5698,
+              "color": 0.717,
+              "colorIntersection": 0.6034,
+              "paletteMatch": 0.7782,
+              "detail": 0.036,
+              "detailRaw": 0.0724,
+              "detailAdded": 0.0729,
+              "bands": 0.275
+            },
+            "file": ".impeccable/review/diff/hero/regions/sidebar-close.png"
+          }
+        ],
+        "advisories": [
+          "(advisory, above the 72% bar; fix in the polish pass before responsive) 5 readings:",
+          "  text lead-description: letter-spacing is tighter than the comp's (gap 0.141 vs 0.396 of the cap height); set letter-spacing to open it by about 3px",
+          "  text registry-rows: cap height 7.2px in the build, 10.3px in the comp (-30%); set font-size so the cap height renders at 10.3px",
+          "  text lead-description: the face renders 62% lighter than the comp's (ink density 0.36 vs 0.95); raise a weight step or use the ranked face",
+          "  text workspace-footer: ink is #181808 in the build, #9b9994 in the comp; use the comp's colour",
+          "  text brand-note: its first line starts 44px lower than in the comp (53px vs 9px into the region box); the spacing above it is too large",
+          "(advisory, unchanged for 3+ attempts) text lead-title: letter-spacing is wider than the comp's (gap 0.228 vs 0.079 of the cap height); set letter-spacing to close it by about 11px",
+          "(advisory, unchanged for 3+ attempts) text brand-note: 2 lines in the build, 4 in the comp; the measure (max-width, font-size, letter-spacing) wraps it differently, so the block is a different shape"
+        ],
+        "regionVerdicts": {
+          "sidebar-brand": "drift",
+          "sidebar-nav": "drift",
+          "account-bar": "missing",
+          "admin-label": "drift",
+          "lead-title": "drift",
+          "lead-description": "drift",
+          "brand-note": "drift",
+          "services-summary": "drift",
+          "services-action": "drift",
+          "careers-summary": "drift",
+          "careers-action": "drift",
+          "team-summary": "drift",
+          "team-action": "drift",
+          "recent-title": "drift",
+          "registry-filters": "missing",
+          "registry-head": "drift",
+          "registry-rows": "drift",
+          "sidebar-close": "missing",
+          "workspace-footer": "missing"
+        },
+        "at": "2026-09-16T13:58:10.475Z"
+      },
+      "forced": null,
+      "readingsSeen": {
+        "text lead-title: letter-spacing is wider than the comp's (gap 0.228 vs 0.079 of the cap height); set letter-spacing to close it by about 11px": 4,
+        "text lead-description: letter-spacing is tighter than the comp's (gap 0.108 vs 0.396 of the cap height); set letter-spacing to open it by about 3px": 3,
+        "text brand-note: 2 lines in the build, 4 in the comp; the measure (max-width, font-size, letter-spacing) wraps it differently, so the block is a different shape": 4,
+        "text lead-description: the face renders 51% lighter than the comp's (ink density 0.47 vs 0.95); raise a weight step or use the ranked face": 3,
+        "text sidebar-close: ink is #f8d787 in the build, #93918d in the comp; use the comp's colour": 3,
+        "text lead-description: its first line starts 13px lower than in the comp (13px vs 0px into the region box); the spacing above it is too large": 3,
+        "text brand-note: its first line starts 33px lower than in the comp (42px vs 9px into the region box); the spacing above it is too large": 3,
+        "control services-action: its rule sits 4px into the box in the comp and 37px in the build (+33px), so the strip is taller than the comp's; match the height, not only the position": 3,
+        "control team-action: its rule sits 4px into the box in the comp and 37px in the build (+33px), so the strip is taller than the comp's; match the height, not only the position": 3,
+        "text lead-description: letter-spacing is tighter than the comp's (gap 0.141 vs 0.396 of the cap height); set letter-spacing to open it by about 3px": 1,
+        "text registry-rows: cap height 7.2px in the build, 10.3px in the comp (-30%); set font-size so the cap height renders at 10.3px": 1,
+        "text lead-description: the face renders 62% lighter than the comp's (ink density 0.36 vs 0.95); raise a weight step or use the ranked face": 1,
+        "text workspace-footer: ink is #181808 in the build, #9b9994 in the comp; use the comp's colour": 1,
+        "text brand-note: its first line starts 44px lower than in the comp (53px vs 9px into the region box); the spacing above it is too large": 1
+      },
+      "records": 3
+    },
+    "sections": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "motion": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "responsive": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "review": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": null,
+  "plates": {}
+}

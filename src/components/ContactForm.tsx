@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { services } from "@/data/services";
+import type { ServiceRecord } from "@/types/content";
 import { ArrowIcon } from "./StudioIcons";
 
 const COOLDOWN_MS = 5 * 60 * 1000;
@@ -14,7 +14,7 @@ function formatRemaining(milliseconds: number) {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }
 
-export default function ContactForm() {
+export default function ContactForm({ services }: { services: ServiceRecord[] }) {
   const [state, setState] = useState<"idle" | "loading" | "error">("idle");
   const [cooldownUntil, setCooldownUntil] = useState(0);
   const [now, setNow] = useState(0);

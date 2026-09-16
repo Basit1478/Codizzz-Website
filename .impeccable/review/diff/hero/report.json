@@ -1,0 +1,738 @@
+{
+  "tool": "comp-diff",
+  "version": 1,
+  "createdAt": "2026-09-16T13:58:10.093Z",
+  "label": "hero",
+  "comp": ".impeccable/mocks/decision/admin-control-desk.webp",
+  "build": ".impeccable/review/hero-repro.png",
+  "spec": ".impeccable/build/spec.json",
+  "compSize": "1536x1024",
+  "buildSize": "1536x1024",
+  "align": "top",
+  "overall": 0.7602,
+  "verdict": "drift",
+  "scores": {
+    "overall": 0.7602,
+    "structure": 0.7418,
+    "color": 0.9342,
+    "colorIntersection": 0.8782,
+    "paletteMatch": 0.9643,
+    "detail": 0.6033,
+    "detailRaw": 0.6762,
+    "detailAdded": 0.1458,
+    "bands": 0.7748
+  },
+  "palette": {
+    "comp": [
+      {
+        "hex": "#f7f7e8",
+        "coverage": 0.9517
+      },
+      {
+        "hex": "#090909",
+        "coverage": 0.0259
+      },
+      {
+        "hex": "#f87e08",
+        "coverage": 0.0113
+      },
+      {
+        "hex": "#909090",
+        "coverage": 0.0043
+      },
+      {
+        "hex": "#c7c4c2",
+        "coverage": 0.0041
+      },
+      {
+        "hex": "#3a3a3a",
+        "coverage": 0.0027
+      }
+    ],
+    "build": [
+      {
+        "hex": "#f8f8e8",
+        "coverage": 0.9371
+      },
+      {
+        "hex": "#181809",
+        "coverage": 0.0342
+      },
+      {
+        "hex": "#f88808",
+        "coverage": 0.0182
+      },
+      {
+        "hex": "#c8c8b8",
+        "coverage": 0.0099
+      },
+      {
+        "hex": "#b8a8a8",
+        "coverage": 0.0007
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "sidebar-brand",
+      "x": 0.0156,
+      "y": 0.0234,
+      "w": 0.0846,
+      "h": 0.0527,
+      "kind": "text",
+      "score": {
+        "overall": 0.4777,
+        "structure": 0.3722,
+        "color": 0.7659,
+        "colorIntersection": 0.6028,
+        "paletteMatch": 0.8537,
+        "detail": 0.3627,
+        "detailRaw": 0.4356,
+        "detailAdded": 0.1458,
+        "bands": 0.4571
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 7,
+          "y": 7,
+          "w": 123,
+          "h": 40
+        },
+        "build": {
+          "x": 0,
+          "y": 16,
+          "w": 130,
+          "h": 25
+        }
+      }
+    },
+    {
+      "id": "sidebar-nav",
+      "x": 0.0156,
+      "y": 0.1348,
+      "w": 0.0313,
+      "h": 0.0527,
+      "kind": "control",
+      "score": {
+        "overall": 0.6146,
+        "structure": 0.722,
+        "color": 0.5704,
+        "colorIntersection": 0.2083,
+        "paletteMatch": 0.7654,
+        "detail": 0.4502,
+        "detailRaw": 0.4971,
+        "detailAdded": 0.0938,
+        "bands": 0.38
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 7,
+          "y": 9,
+          "w": 35,
+          "h": 36
+        },
+        "build": {
+          "x": 0,
+          "y": 13,
+          "w": 48,
+          "h": 41
+        }
+      }
+    },
+    {
+      "id": "account-bar",
+      "x": 0.8392,
+      "y": 0.0176,
+      "w": 0.082,
+      "h": 0.041,
+      "kind": "control",
+      "score": {
+        "overall": 0.5978,
+        "structure": 0.7063,
+        "color": 0.7984,
+        "colorIntersection": 0.7269,
+        "paletteMatch": 0.837,
+        "detail": 0.0024,
+        "detailRaw": 0.0024,
+        "detailAdded": 0,
+        "bands": 0.4
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 11,
+          "y": 9,
+          "w": 106,
+          "h": 27
+        },
+        "build": null
+      }
+    },
+    {
+      "id": "admin-label",
+      "x": 0.1706,
+      "y": 0.0996,
+      "w": 0.1296,
+      "h": 0.0996,
+      "kind": "text",
+      "score": {
+        "overall": 0.4015,
+        "structure": 0.3405,
+        "color": 0.6837,
+        "colorIntersection": 0.4724,
+        "paletteMatch": 0.7975,
+        "detail": 0.4019,
+        "detailRaw": 0.4488,
+        "detailAdded": 0.0938,
+        "bands": 0
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 10,
+          "w": 191,
+          "h": 92
+        },
+        "build": {
+          "x": 20,
+          "y": 29,
+          "w": 179,
+          "h": 73
+        }
+      }
+    },
+    {
+      "id": "lead-title",
+      "x": 0.1706,
+      "y": 0.0996,
+      "w": 0.4102,
+      "h": 0.1582,
+      "kind": "text",
+      "score": {
+        "overall": 0.5372,
+        "structure": 0.371,
+        "color": 0.7422,
+        "colorIntersection": 0.5719,
+        "paletteMatch": 0.8339,
+        "detail": 0.5407,
+        "detailRaw": 0.5459,
+        "detailAdded": 0.0104,
+        "bands": 0.85
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 10,
+          "w": 615,
+          "h": 142
+        },
+        "build": {
+          "x": 19,
+          "y": 29,
+          "w": 611,
+          "h": 115
+        }
+      }
+    },
+    {
+      "id": "lead-description",
+      "x": 0.1706,
+      "y": 0.2002,
+      "w": 0.4102,
+      "h": 0.0527,
+      "kind": "text",
+      "score": {
+        "overall": 0.5511,
+        "structure": 0.6656,
+        "color": 0.7417,
+        "colorIntersection": 0.5872,
+        "paletteMatch": 0.8249,
+        "detail": 0.2189,
+        "detailRaw": 0.297,
+        "detailAdded": 0.1563,
+        "bands": 0
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 0,
+          "w": 615,
+          "h": 49
+        },
+        "build": {
+          "x": 19,
+          "y": 0,
+          "w": 608,
+          "h": 41
+        }
+      }
+    },
+    {
+      "id": "brand-note",
+      "x": 0.8861,
+      "y": 0.123,
+      "w": 0.0469,
+      "h": 0.1055,
+      "kind": "text",
+      "score": {
+        "overall": 0.6527,
+        "structure": 0.6743,
+        "color": 0.7903,
+        "colorIntersection": 0.643,
+        "paletteMatch": 0.8696,
+        "detail": 0.28,
+        "detailRaw": 0.3321,
+        "detailAdded": 0.1042,
+        "bands": 0.76
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 10,
+          "y": 9,
+          "w": 56,
+          "h": 94
+        },
+        "build": {
+          "x": 0,
+          "y": 53,
+          "w": 71,
+          "h": 29
+        }
+      }
+    },
+    {
+      "id": "services-summary",
+      "x": 0.1628,
+      "y": 0.3584,
+      "w": 0.0469,
+      "h": 0.0703,
+      "kind": "text",
+      "score": {
+        "overall": 0.54,
+        "structure": 0.5118,
+        "color": 0.659,
+        "colorIntersection": 0.4383,
+        "paletteMatch": 0.7779,
+        "detail": 0.3574,
+        "detailRaw": 0.3887,
+        "detailAdded": 0.0625,
+        "bands": 0.6571
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 7,
+          "y": 8,
+          "w": 57,
+          "h": 55
+        },
+        "build": {
+          "x": 32,
+          "y": 9,
+          "w": 40,
+          "h": 52
+        }
+      }
+    },
+    {
+      "id": "services-action",
+      "x": 0.304,
+      "y": 0.3643,
+      "w": 0.1172,
+      "h": 0.0586,
+      "kind": "control",
+      "score": {
+        "overall": 0.6392,
+        "structure": 0.7161,
+        "color": 0.6954,
+        "colorIntersection": 0.4581,
+        "paletteMatch": 0.8231,
+        "detail": 0.3682,
+        "detailRaw": 0.4359,
+        "detailAdded": 0.1354,
+        "bands": 0.5
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 180,
+          "h": 60
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 180,
+          "h": 60
+        }
+      }
+    },
+    {
+      "id": "careers-summary",
+      "x": 0.5872,
+      "y": 0.3643,
+      "w": 0.1094,
+      "h": 0.0586,
+      "kind": "text",
+      "score": {
+        "overall": 0.6041,
+        "structure": 0.676,
+        "color": 0.7056,
+        "colorIntersection": 0.4532,
+        "paletteMatch": 0.8416,
+        "detail": 0.3948,
+        "detailRaw": 0.4781,
+        "detailAdded": 0.1667,
+        "bands": 0.305
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 168,
+          "h": 60
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 168,
+          "h": 60
+        }
+      }
+    },
+    {
+      "id": "careers-action",
+      "x": 0.5859,
+      "y": 0.3643,
+      "w": 0.1094,
+      "h": 0.0586,
+      "kind": "control",
+      "score": {
+        "overall": 0.6343,
+        "structure": 0.6817,
+        "color": 0.7089,
+        "colorIntersection": 0.4532,
+        "paletteMatch": 0.8466,
+        "detail": 0.3973,
+        "detailRaw": 0.4807,
+        "detailAdded": 0.1667,
+        "bands": 0.325
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 168,
+          "h": 60
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 168,
+          "h": 60
+        }
+      }
+    },
+    {
+      "id": "team-summary",
+      "x": 0.7272,
+      "y": 0.3584,
+      "w": 0.0469,
+      "h": 0.0703,
+      "kind": "text",
+      "score": {
+        "overall": 0.5572,
+        "structure": 0.4368,
+        "color": 0.6882,
+        "colorIntersection": 0.5,
+        "paletteMatch": 0.7896,
+        "detail": 0.445,
+        "detailRaw": 0.5179,
+        "detailAdded": 0.1458,
+        "bands": 1
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 11,
+          "y": 8,
+          "w": 55,
+          "h": 55
+        },
+        "build": {
+          "x": 0,
+          "y": 9,
+          "w": 56,
+          "h": 52
+        }
+      }
+    },
+    {
+      "id": "team-action",
+      "x": 0.8665,
+      "y": 0.3643,
+      "w": 0.1211,
+      "h": 0.0586,
+      "kind": "control",
+      "score": {
+        "overall": 0.6169,
+        "structure": 0.6568,
+        "color": 0.6879,
+        "colorIntersection": 0.448,
+        "paletteMatch": 0.8171,
+        "detail": 0.4029,
+        "detailRaw": 0.455,
+        "detailAdded": 0.1042,
+        "bands": 0.4971
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 186,
+          "h": 60
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 186,
+          "h": 60
+        }
+      }
+    },
+    {
+      "id": "recent-title",
+      "x": 0.1589,
+      "y": 0.5,
+      "w": 0.1211,
+      "h": 0.0293,
+      "kind": "text",
+      "score": {
+        "overall": 0.5258,
+        "structure": 0.4269,
+        "color": 0.7297,
+        "colorIntersection": 0.5618,
+        "paletteMatch": 0.8201,
+        "detail": 0.3755,
+        "detailRaw": 0.4536,
+        "detailAdded": 0.1563,
+        "bands": 0.7364
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 5,
+          "w": 167,
+          "h": 25
+        },
+        "build": {
+          "x": 37,
+          "y": 0,
+          "w": 149,
+          "h": 25
+        }
+      }
+    },
+    {
+      "id": "registry-filters",
+      "x": 0.5859,
+      "y": 0.5,
+      "w": 0.0898,
+      "h": 0.0234,
+      "kind": "control",
+      "score": {
+        "overall": 0.6506,
+        "structure": 0.7782,
+        "color": 0.8551,
+        "colorIntersection": 0.7572,
+        "paletteMatch": 0.9078,
+        "detail": 0.0055,
+        "detailRaw": 0.0055,
+        "detailAdded": 0,
+        "bands": 0.4
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 6,
+          "y": 10,
+          "w": 129,
+          "h": 18
+        },
+        "build": null
+      }
+    },
+    {
+      "id": "registry-head",
+      "x": 0.1589,
+      "y": 0.5,
+      "w": 0.1211,
+      "h": 0.0293,
+      "kind": "text",
+      "score": {
+        "overall": 0.5258,
+        "structure": 0.4269,
+        "color": 0.7297,
+        "colorIntersection": 0.5618,
+        "paletteMatch": 0.8201,
+        "detail": 0.3755,
+        "detailRaw": 0.4536,
+        "detailAdded": 0.1563,
+        "bands": 0.7364
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 5,
+          "w": 167,
+          "h": 25
+        },
+        "build": {
+          "x": 37,
+          "y": 0,
+          "w": 149,
+          "h": 25
+        }
+      }
+    },
+    {
+      "id": "registry-rows",
+      "x": 0.1589,
+      "y": 0.5996,
+      "w": 0.1589,
+      "h": 0.0215,
+      "kind": "text",
+      "score": {
+        "overall": 0.651,
+        "structure": 0.6891,
+        "color": 0.8219,
+        "colorIntersection": 0.7268,
+        "paletteMatch": 0.8731,
+        "detail": 0.1399,
+        "detailRaw": 0.2076,
+        "detailAdded": 0.1354,
+        "bands": 0.8
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 13,
+          "w": 223,
+          "h": 11
+        },
+        "build": {
+          "x": 44,
+          "y": 11,
+          "w": 58,
+          "h": 12
+        }
+      }
+    },
+    {
+      "id": "sidebar-close",
+      "x": 0.0156,
+      "y": 0.8877,
+      "w": 0.0846,
+      "h": 0.0527,
+      "kind": "text",
+      "score": {
+        "overall": 0.497,
+        "structure": 0.5698,
+        "color": 0.717,
+        "colorIntersection": 0.6034,
+        "paletteMatch": 0.7782,
+        "detail": 0.036,
+        "detailRaw": 0.0724,
+        "detailAdded": 0.0729,
+        "bands": 0.275
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 11,
+          "w": 120,
+          "h": 36
+        },
+        "build": {
+          "x": 1,
+          "y": 52,
+          "w": 72,
+          "h": 2
+        }
+      }
+    },
+    {
+      "id": "workspace-footer",
+      "x": 0.8268,
+      "y": 0.9531,
+      "w": 0.1602,
+      "h": 0.0234,
+      "kind": "text",
+      "score": {
+        "overall": 0.7142,
+        "structure": 0.8321,
+        "color": 0.9099,
+        "colorIntersection": 0.856,
+        "paletteMatch": 0.9388,
+        "detail": 0.0716,
+        "detailRaw": 0.0976,
+        "detailAdded": 0.0521,
+        "bands": 0.6
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 11,
+          "y": 19,
+          "w": 226,
+          "h": 8
+        },
+        "build": {
+          "x": 172,
+          "y": 18,
+          "w": 25,
+          "h": 15
+        }
+      }
+    }
+  ],
+  "files": {
+    "sideBySide": "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/side-by-side.png",
+    "heatmap": "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/heatmap.png",
+    "regionFiles": [
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/sidebar-brand.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/sidebar-nav.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/account-bar.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/admin-label.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/lead-title.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/lead-description.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/brand-note.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/services-summary.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/services-action.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/careers-summary.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/careers-action.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/team-summary.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/team-action.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/recent-title.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/registry-filters.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/registry-head.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/registry-rows.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/sidebar-close.png",
+      "C:/Users/Windows 10 Pro/Desktop/codizzz/Codizzz Website/.impeccable/review/diff/hero/regions/workspace-footer.png"
+    ]
+  }
+}

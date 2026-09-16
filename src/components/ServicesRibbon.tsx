@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { services } from "@/data/services";
-import { ServiceIcon } from "./StudioIcons";
+import type { ServiceRecord } from "@/types/content";
+import ServiceMark from "./ServiceMark";
 
-export default function ServicesRibbon() {
+export default function ServicesRibbon({ services }: { services: ServiceRecord[] }) {
   const ribbonRef = useRef<HTMLElement>(null);
   const [isRunning, setIsRunning] = useState(false);
 
@@ -38,16 +38,16 @@ export default function ServicesRibbon() {
       <div className="services-ribbon__track">
         <div className="services-ribbon__group">
           {services.map((service) => (
-            <Link href={`/services#${service.type}`} key={service.title}>
-              <ServiceIcon type={service.type} />
+            <Link href={`/services#${service.slug}`} key={service.id}>
+              <ServiceMark service={service} />
               <span>{service.title}</span>
             </Link>
           ))}
         </div>
         <div className="services-ribbon__group services-ribbon__group--duplicate" aria-hidden="true">
           {services.map((service) => (
-            <Link href={`/services#${service.type}`} key={`duplicate-${service.title}`} tabIndex={-1}>
-              <ServiceIcon type={service.type} />
+            <Link href={`/services#${service.slug}`} key={`duplicate-${service.id}`} tabIndex={-1}>
+              <ServiceMark service={service} />
               <span>{service.title}</span>
             </Link>
           ))}

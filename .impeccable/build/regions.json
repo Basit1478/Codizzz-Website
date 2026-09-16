@@ -1,0 +1,23 @@
+{
+  "regions": [
+    {"id": "sidebar-brand", "kind": "text", "grid": "A0:A0", "note": "Codizzz Admin brand lockup"},
+    {"id": "sidebar-nav", "kind": "control", "grid": "A1:A3", "note": "Services, Careers and Team resource navigation"},
+    {"id": "account-bar", "kind": "control", "grid": "I0:J0", "note": "Signed-in admin account control"},
+    {"id": "admin-label", "kind": "text", "grid": "B1:C1", "note": "Small Codizzz Admin workspace label"},
+    {"id": "lead-title", "kind": "text", "grid": "B1:H2", "note": "Large Content Control Desk heading"},
+    {"id": "lead-description", "kind": "text", "grid": "B2:F2", "note": "Short workspace purpose statement"},
+    {"id": "brand-note", "kind": "text", "grid": "I1:J2", "note": "Short brand statement with registration rule"},
+    {"id": "services-summary", "kind": "text", "grid": "B3:D4", "note": "Services resource title and record count"},
+    {"id": "services-action", "kind": "control", "grid": "D3:E4", "note": "Add service action"},
+    {"id": "careers-summary", "kind": "text", "grid": "E3:G4", "note": "Careers resource title and record count"},
+    {"id": "careers-action", "kind": "control", "grid": "F3:G4", "note": "Add role action"},
+    {"id": "team-summary", "kind": "text", "grid": "H3:I4", "note": "Team resource title and record count"},
+    {"id": "team-action", "kind": "control", "grid": "I3:J4", "note": "Add member action"},
+    {"id": "recent-title", "kind": "text", "grid": "B5:D5", "note": "Recent content section title"},
+    {"id": "registry-filters", "kind": "control", "grid": "F5:J5", "note": "Search, type filter and status filter controls"},
+    {"id": "registry-head", "kind": "text", "grid": "B5:J5", "note": "Content registry column labels"},
+    {"id": "registry-rows", "kind": "text", "grid": "B6:J8", "note": "Recent content rows with type, status and updated date"},
+    {"id": "sidebar-close", "kind": "text", "grid": "A8:A9", "note": "Codizzz positioning statement"},
+    {"id": "workspace-footer", "kind": "text", "grid": "B9:J9", "note": "Copyright and closing line"}
+  ]
+}

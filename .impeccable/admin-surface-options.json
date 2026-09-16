@@ -1,0 +1,73 @@
+{
+  "title": "Choose the admin workflow",
+  "question": "Which structure should Codizzz use for everyday services, careers and team updates?",
+  "options": [
+    {
+      "id": "control-desk",
+      "label": "Content Control Desk",
+      "kicker": "THE ROLL",
+      "lineage": "Editorial production desk",
+      "thesis": "A calm overview leads into focused resource workspaces without losing context.",
+      "palette": ["#F7F4EE", "#12100E", "#FF8800", "#EBE6DC"],
+      "materials": ["warm pattern paper", "measured rules", "graphite labels"],
+      "viewport": "A compact left rail, a central status overview for Services, Careers and Team, and a recent-changes ledger with one clear Add action per resource.",
+      "risk": "One extra click is needed before editing a specific record.",
+      "comp": ".impeccable/mocks/decision/admin-control-desk.webp",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "resource rail", "x": 0, "y": 0, "w": 2, "h": 10, "accent": true},
+          {"label": "workspace header", "x": 2, "y": 0, "w": 10, "h": 2},
+          {"label": "resource summary", "x": 2, "y": 2, "w": 10, "h": 3},
+          {"label": "recent content", "x": 2, "y": 5, "w": 10, "h": 5}
+        ]
+      }
+    },
+    {
+      "id": "split-registry",
+      "label": "Split Registry",
+      "lineage": "Master-detail content editor",
+      "thesis": "Choose a resource, select an item, and edit it in place across three stable panes.",
+      "palette": ["#F7F4EE", "#12100E", "#FF8800", "#EBE6DC"],
+      "materials": ["ruled index", "fixed editor sheet", "registration orange"],
+      "viewport": "A narrow resource rail, a sortable item list, and a full-height editor pane with Save, Publish and Delete held in predictable positions.",
+      "risk": "The three-pane layout becomes a two-step drill-down on small screens.",
+      "comp": ".impeccable/mocks/decision/admin-split-registry.webp",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "resource rail", "x": 0, "y": 0, "w": 2, "h": 10, "accent": true},
+          {"label": "item registry", "x": 2, "y": 0, "w": 4, "h": 10},
+          {"label": "editor", "x": 6, "y": 0, "w": 6, "h": 8},
+          {"label": "record actions", "x": 6, "y": 8, "w": 6, "h": 2, "accent": true}
+        ]
+      }
+    },
+    {
+      "id": "command-library",
+      "label": "Command Library",
+      "lineage": "Search-first content registry",
+      "thesis": "One fast registry makes every service, role and team member searchable and editable from the keyboard.",
+      "palette": ["#F7F4EE", "#12100E", "#FF8800", "#EBE6DC"],
+      "materials": ["tabular ledger", "command strip", "single-pixel rules"],
+      "viewport": "A prominent search-and-create command strip sits above a unified table; filters isolate each content type and a selected row expands into an inline editor.",
+      "risk": "A unified registry is less visually separated for occasional users.",
+      "comp": ".impeccable/mocks/decision/admin-command-library.webp",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "command strip", "x": 0, "y": 0, "w": 12, "h": 2, "accent": true},
+          {"label": "resource filters", "x": 0, "y": 2, "w": 12, "h": 1},
+          {"label": "content registry", "x": 0, "y": 3, "w": 12, "h": 4},
+          {"label": "inline editor", "x": 0, "y": 7, "w": 12, "h": 3}
+        ]
+      }
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "comp", "toggle": true},
+  "steer": true
+}

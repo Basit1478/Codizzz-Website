@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { TeamMember } from "@/types/content";
 import { ArrowIcon } from "./StudioIcons";
 import MagneticLink from "./MagneticLink";
 
@@ -54,31 +55,7 @@ export function FounderSection() {
   );
 }
 
-const teamMembers = [
-  {
-    name: "Umer Ali",
-    role: "Co-founder & AI Engineer",
-    image: "/brand/team-umer-ali.jpg",
-    summary: "Builds agentic products and full-stack experiences with a focus on dependable, practical AI Automation.",
-    skills: ["Next.js", "React", "Python", "TypeScript", "AI Agents", "Claude Code"],
-    links: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/umer-ali-a962252ba/" },
-      { label: "X", href: "https://x.com/Umerali_4" },
-    ],
-  },
-  {
-    name: "Muhammad Anzal",
-    role: "AI Developer",
-    image: "/brand/team-muhammad-anzal.jpg",
-    summary: "Develops AI systems grounded in Python, retrieval workflows and production-ready model integrations.",
-    skills: ["Python", "Claude Code", "RAG"],
-    links: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-anzal-035705348/" },
-    ],
-  },
-];
-
-export function TeamSection() {
+export function TeamSection({ members }: { members: TeamMember[] }) {
   return (
     <section className="team section-shell" data-reveal>
       <div className="team__heading">
@@ -86,11 +63,11 @@ export function TeamSection() {
         <p>AI engineering, software development and product thinking brought together around each build.</p>
       </div>
       <div className="team__list">
-        {teamMembers.map((member) => (
-          <article className="team-member" key={member.name}>
+        {members.map((member) => (
+          <article className="team-member" key={member.id}>
             <div className="team-member__portrait">
               <Image
-                src={member.image}
+                src={member.image || "/brand/codizzz-mark-orange.png"}
                 alt={`${member.name}, ${member.role} at Codizzz`}
                 fill
                 sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 160px, 14vw"
@@ -105,11 +82,8 @@ export function TeamSection() {
               {member.skills.map((skill) => <li key={skill}>{skill}</li>)}
             </ul>
             <div className="team-member__links">
-              {member.links.map((link) => (
-                <a className="text-link" href={link.href} key={link.label} target="_blank" rel="noreferrer">
-                  {link.label} <ArrowIcon />
-                </a>
-              ))}
+              {member.linkedinUrl && <a className="text-link" href={member.linkedinUrl} target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a>}
+              {member.xUrl && <a className="text-link" href={member.xUrl} target="_blank" rel="noreferrer">X <ArrowIcon /></a>}
             </div>
           </article>
         ))}
