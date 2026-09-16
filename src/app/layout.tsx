@@ -122,10 +122,9 @@ const structuredData = {
 
 const themeScript = `
   try {
-    var savedTheme = localStorage.getItem('codizzz-theme');
-    var theme = savedTheme === 'dark' || savedTheme === 'light'
-      ? savedTheme
-      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    localStorage.removeItem('codizzz-theme');
+    var hour = new Date().getHours();
+    var theme = hour >= 6 && hour < 18 ? 'light' : 'dark';
     document.documentElement.dataset.theme = theme;
   } catch (_) {}
 `;
