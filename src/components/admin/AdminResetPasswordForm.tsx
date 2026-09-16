@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import AdminPasswordField from "./AdminPasswordField";
 
 export default function AdminResetPasswordForm() {
   const router = useRouter();
@@ -41,8 +42,8 @@ export default function AdminResetPasswordForm() {
 
   return (
     <form className="admin-login-form" onSubmit={submit}>
-      <label><span>New password</span><input name="password" type="password" autoComplete="new-password" minLength={12} required /></label>
-      <label><span>Confirm new password</span><input name="confirmation" type="password" autoComplete="new-password" minLength={12} required /></label>
+      <AdminPasswordField label="New password" name="password" autoComplete="new-password" minLength={12} />
+      <AdminPasswordField label="Confirm new password" name="confirmation" autoComplete="new-password" minLength={12} />
       {status === "error" && <p className="admin-form-message is-error" role="alert">{message}</p>}
       <button className="admin-primary-action" disabled={status === "loading"}>{status === "loading" ? "Updating…" : "Set new password"}</button>
     </form>

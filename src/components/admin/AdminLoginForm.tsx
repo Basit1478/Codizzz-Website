@@ -2,8 +2,8 @@
 
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import AdminPasswordField from "./AdminPasswordField";
 
 export default function AdminLoginForm({ configured, defaultEmail, notice = "" }: { configured: boolean; defaultEmail: string; notice?: string }) {
   const router = useRouter();
@@ -32,7 +32,7 @@ export default function AdminLoginForm({ configured, defaultEmail, notice = "" }
       {!configured && <p className="admin-notice" role="status">Add the Supabase publishable key to enable secure sign-in.</p>}
       {notice && <p className="admin-form-message is-success" role="status">{notice}</p>}
       <label><span>Email</span><input name="email" type="email" autoComplete="username" defaultValue={defaultEmail} required disabled={!configured} /></label>
-      <label><span>Password</span><input name="password" type="password" autoComplete="current-password" required disabled={!configured} /><Link className="admin-forgot-link" href="/admin/forgot-password">Forgot password?</Link></label>
+      <AdminPasswordField label="Password" name="password" autoComplete="current-password" disabled={!configured} forgotHref="/admin/forgot-password" />
       {status === "error" && <p className="admin-form-message is-error" role="alert">{message}</p>}
       <button className="admin-primary-action" disabled={!configured || status === "loading"}>{status === "loading" ? "Signing in…" : "Sign in"}</button>
     </form>
