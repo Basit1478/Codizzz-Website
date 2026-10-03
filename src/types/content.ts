@@ -17,6 +17,7 @@ export type CareerRole = {
   title: string;
   focus: string;
   description: string;
+  applicationStatus: "open" | "upcoming";
   position: number;
   published: boolean;
   updatedAt?: string;

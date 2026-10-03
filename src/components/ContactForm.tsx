@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import type { ServiceRecord } from "@/types/content";
+import { contactFormSchema, firstValidationError } from "@/lib/validation";
 import { ArrowIcon } from "./StudioIcons";
 
 const COOLDOWN_MS = 5 * 60 * 1000;
@@ -16,6 +17,7 @@ function formatRemaining(milliseconds: number) {
 
 export default function ContactForm({ services }: { services: ServiceRecord[] }) {
   const [state, setState] = useState<"idle" | "loading" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [cooldownUntil, setCooldownUntil] = useState(0);
   const [now, setNow] = useState(0);
   const [successOpen, setSuccessOpen] = useState(false);
@@ -60,10 +62,17 @@ export default function ContactForm({ services }: { services: ServiceRecord[] })
     event.preventDefault();
     if (coolingDown) return;
     const formElement = event.currentTarget;
-    setState("loading");
     const form = new FormData(formElement);
+    const parsed = contactFormSchema.safeParse(Object.fromEntries(form));
+    if (!parsed.success) {
+      setErrorMessage(firstValidationError(parsed.error));
+      setState("error");
+      return;
+    }
+    setState("loading");
+    setErrorMessage("");
     try {
-      const response = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(Object.fromEntries(form)) });
+      const response = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(parsed.data) });
       const result = await response.json().catch(() => ({}));
       if (response.status === 429) {
         const retryAfter = typeof result.retryAfter === "number" ? result.retryAfter * 1000 : COOLDOWN_MS;
@@ -74,7 +83,7 @@ export default function ContactForm({ services }: { services: ServiceRecord[] })
         setState("idle");
         return;
       }
-      if (!response.ok) throw new Error();
+      if (!response.ok) throw new Error(typeof result.error === "string" ? result.error : "The form could not be sent.");
       const until = Date.now() + COOLDOWN_MS;
       setNow(Date.now());
       setCooldownUntil(until);
@@ -82,14 +91,15 @@ export default function ContactForm({ services }: { services: ServiceRecord[] })
       formElement.reset();
       setState("idle");
       setSuccessOpen(true);
-    } catch {
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : "The form could not be sent.");
       setState("error");
     }
   }
 
   return (
     <>
-      <form className="contact-form" onSubmit={submit}>
+      <form className="contact-form" onSubmit={submit} noValidate>
         <fieldset disabled={state === "loading" || coolingDown}>
           <label><span>Name</span><input name="name" autoComplete="name" required maxLength={120} placeholder="Your name" /></label>
           <label><span>Email</span><input name="email" type="email" autoComplete="email" required maxLength={254} placeholder="you@company.com" /></label>
@@ -97,7 +107,7 @@ export default function ContactForm({ services }: { services: ServiceRecord[] })
           <label><span>What kind of build?</span><select name="service" required defaultValue=""><option value="" disabled>Select a service</option>{services.map((service) => <option key={service.title}>{service.title}</option>)}</select></label>
           <label><span>What can we help you with?</span><textarea name="message" required maxLength={5000} rows={5} placeholder="Tell us where work slows down, what needs to connect, or what you want to build." /></label>
         </fieldset>
-        {state === "error" && <p className="form-error" role="alert">The form could not be sent. Email <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a> or <a href="https://wa.me/923703168969" target="_blank" rel="noreferrer">message us on WhatsApp</a>.</p>}
+        {state === "error" && <p className="form-error" role="alert">{errorMessage} Email <a href="mailto:teamcodizzz@gmail.com">teamcodizzz@gmail.com</a> or <a href="https://wa.me/923703168969" target="_blank" rel="noreferrer">message us on WhatsApp</a>.</p>}
         {coolingDown && <p className="form-cooldown contact-form__wide" role="status">Requirement received. You can send another in <strong>{formatRemaining(remaining)}</strong>.</p>}
         <button className="button button--solid" disabled={state === "loading" || coolingDown}>
           {state === "loading" ? "Sending requirement…" : coolingDown ? `Send again in ${formatRemaining(remaining)}` : <>Send requirement <ArrowIcon /></>}

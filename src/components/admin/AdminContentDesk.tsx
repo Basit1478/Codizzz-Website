@@ -187,7 +187,7 @@ function ServiceFields({ record }: { record: ServiceRecord | null }) {
 }
 
 function CareerFields({ record }: { record: CareerRole | null }) {
-  return <div className="admin-form-grid"><Field label="Role title" wide><input name="title" defaultValue={record?.title ?? ""} maxLength={120} required /></Field><CommonFields record={record} /><Field label="Focus" wide><input name="focus" defaultValue={record?.focus ?? ""} maxLength={160} required placeholder="e.g. Python and FastAPI" /></Field><Field label="Role description" wide><textarea name="description" defaultValue={record?.description ?? ""} rows={5} maxLength={600} required /></Field></div>;
+  return <div className="admin-form-grid"><Field label="Role title" wide><input name="title" defaultValue={record?.title ?? ""} maxLength={120} required /></Field><CommonFields record={record} /><Field label="Application button"><select name="applicationStatus" defaultValue={record?.applicationStatus ?? "open"} required><option value="open">Apply now</option><option value="upcoming">Upcoming</option></select><small>Choose whether visitors can apply now or only see that the role is upcoming.</small></Field><Field label="Focus" wide><input name="focus" defaultValue={record?.focus ?? ""} maxLength={160} required placeholder="e.g. Python and FastAPI" /></Field><Field label="Role description" wide><textarea name="description" defaultValue={record?.description ?? ""} rows={5} maxLength={600} required /></Field></div>;
 }
 
 function TeamFields({ record }: { record: TeamMember | null }) {

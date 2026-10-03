@@ -19,6 +19,7 @@ export const revalidate = 60;
 export default async function CareersPage({ searchParams }: { searchParams?: { role?: string } }) {
   const careerRoles = await getCareerRoles();
   const selectedRole = await getCareerRole(searchParams?.role);
+  const openRoles = careerRoles.filter((role) => role.applicationStatus === "open");
 
   return (
     <main>
@@ -45,9 +46,11 @@ export default async function CareersPage({ searchParams }: { searchParams?: { r
                 <span>{role.focus}</span>
               </div>
               <p>{role.description}</p>
-              <Link className="button button--compact" href={`/careers?role=${role.slug}#apply`}>
-                Apply <ArrowIcon />
-              </Link>
+              {role.applicationStatus === "open" ? (
+                <Link className="button button--compact" href={`/careers?role=${role.slug}#apply`}>Apply now <ArrowIcon /></Link>
+              ) : (
+                <span className="button button--compact career-button--upcoming" aria-label={`${role.title} applications are upcoming`}>Upcoming</span>
+              )}
             </article>
           ))}
         </div>
@@ -61,14 +64,14 @@ export default async function CareersPage({ searchParams }: { searchParams?: { r
         </div>
       </section>
 
-      {selectedRole ? (
+      {selectedRole?.applicationStatus === "open" ? (
         <section className="career-apply section-shell" id="apply" aria-labelledby="apply-title">
-          <CareerApplicationForm key={selectedRole.slug} initialRole={selectedRole.slug} roles={careerRoles} />
+          <CareerApplicationForm key={selectedRole.slug} initialRole={selectedRole.slug} roles={openRoles} />
         </section>
       ) : (
         <section className="career-prompt section-shell" id="apply" aria-labelledby="apply-prompt-title" data-reveal>
-          <h2 id="apply-prompt-title">Choose a role to begin.</h2>
-          <p>Select one of the open internships above. The application form will open here with your role already selected.</p>
+          <h2 id="apply-prompt-title">{selectedRole ? "Applications opening soon." : "Choose a role to begin."}</h2>
+          <p>{selectedRole ? `${selectedRole.title} is listed as upcoming. Check back when applications open.` : "Select one of the open internships above. The application form will open here with your role already selected."}</p>
         </section>
       )}
       <Footer />

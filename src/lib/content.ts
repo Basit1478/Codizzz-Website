@@ -39,6 +39,7 @@ export async function getCareerRoles(): Promise<CareerRole[]> {
   if (error || !data) return [];
   return data.map((row) => ({
     id: row.id, slug: row.slug, title: row.title, focus: row.focus, description: row.description,
+    applicationStatus: row.application_status === "upcoming" ? "upcoming" : "open",
     position: row.position, published: row.published, updatedAt: row.updated_at,
   }));
 }

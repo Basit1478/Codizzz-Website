@@ -37,7 +37,7 @@ export default async function AdminPage() {
   if (hasSchemaError) return <AdminContentDesk services={services} careers={careerRoles} team={teamMembers} userEmail={user.email ?? adminEmail} readOnly />;
 
   const managedServices: ServiceRecord[] = (serviceResult.data ?? []).map((row) => ({ id: row.id, slug: row.slug, iconKey: row.icon_key, iconPath: row.icon_path ?? "", icon: serviceIconUrl(row.icon_path ?? ""), title: row.title, short: row.summary, position: row.position, published: row.published, updatedAt: row.updated_at }));
-  const managedCareers: CareerRole[] = (careerResult.data ?? []).map((row) => ({ id: row.id, slug: row.slug, title: row.title, focus: row.focus, description: row.description, position: row.position, published: row.published, updatedAt: row.updated_at }));
+  const managedCareers: CareerRole[] = (careerResult.data ?? []).map((row) => ({ id: row.id, slug: row.slug, title: row.title, focus: row.focus, description: row.description, applicationStatus: row.application_status === "upcoming" ? "upcoming" : "open", position: row.position, published: row.published, updatedAt: row.updated_at }));
   const managedTeam: TeamMember[] = (teamResult.data ?? []).map((row) => ({ id: row.id, slug: row.slug, name: row.name, role: row.role, imagePath: row.image_path ?? "", image: imageUrl(row.image_path ?? ""), summary: row.summary, skills: row.skills ?? [], linkedinUrl: row.linkedin_url ?? "", xUrl: row.x_url ?? "", position: row.position, published: row.published, updatedAt: row.updated_at }));
 
   return <AdminContentDesk services={managedServices} careers={managedCareers} team={managedTeam} userEmail={user.email ?? adminEmail} />;

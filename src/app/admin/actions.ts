@@ -97,12 +97,17 @@ export async function saveCareerRole(form: FormData): Promise<AdminActionResult>
   const title = text(form, "title");
   const focus = text(form, "focus");
   const description = text(form, "description");
+  const applicationStatus = text(form, "applicationStatus");
   if (!slugPattern.test(slug)) return { ok: false, message: "Slug can use lowercase letters, numbers and hyphens only." };
-  if (title.length < 2 || focus.length < 2 || description.length < 10) return { ok: false, message: "Complete every role field before saving." };
-  const payload = { slug, title, focus, description, position: position(form), published: form.get("published") === "on" };
+  if (title.length < 2 || focus.length < 2 || description.length < 10 || !new Set(["open", "upcoming"]).has(applicationStatus)) return { ok: false, message: "Complete every role field before saving." };
+  const payload = { slug, title, focus, description, application_status: applicationStatus, position: position(form), published: form.get("published") === "on" };
   const query = id ? auth.supabase.from("career_roles").update(payload).eq("id", id) : auth.supabase.from("career_roles").insert(payload);
   const { data, error } = await query.select("id").maybeSingle();
-  if (error) return { ok: false, message: error.code === "23505" ? "That role slug already exists." : "Role could not be saved." };
+  if (error) {
+    if (error.code === "23505") return { ok: false, message: "That role slug already exists." };
+    if (error.code === "42703" || error.code === "PGRST204") return { ok: false, message: "Run the career-status migration, then try again." };
+    return { ok: false, message: "Role could not be saved." };
+  }
   if (!data) return { ok: false, message: "This role no longer exists. Refresh the page and try again." };
   refreshPublicContent();
   return { ok: true, message: id ? "Role updated." : "Role added." };

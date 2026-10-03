@@ -321,6 +321,8 @@ html[data-theme="dark"] .contact-form option { color-scheme: dark; background-co
 .career-list__role span { color: var(--accent); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
 .career-list article > p { max-width: 48ch; margin: 0; color: var(--muted); }
 .career-list .button { min-width: 126px; }
+.career-button--upcoming { border-color: var(--line); background: var(--paper-deep); color: var(--muted); cursor: default; }
+.career-button--upcoming:hover { color: var(--muted); transform: none; }
 .career-note { display: grid; grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr); gap: clamp(3rem, 8vw, 10rem); background: var(--paper-deep); border-bottom: 1px solid var(--line); }
 .career-note h2 { margin: 0; }
 .career-note > div { max-width: 68ch; align-self: end; }

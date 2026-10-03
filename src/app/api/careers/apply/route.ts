@@ -1,18 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { getCareerRole } from "@/lib/content";
+import { careerApplicationSchema, firstValidationError } from "@/lib/validation";
 
 export const runtime = "nodejs";
 
-const MAX_CV_BYTES = 3 * 1024 * 1024;
 const COOLDOWN_MS = 5 * 60 * 1000;
 const submissionCooldowns = new Map<string, number>();
-const allowedTypes = new Set([
-  "application/pdf",
-  "application/msword",
-  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-]);
-const allowedExtensions = new Set(["pdf", "doc", "docx"]);
+const DEFAULT_FROM_EMAIL = "Codizzz Careers <onboarding@resend.dev>";
+
+function isValidEmailHeader(value: string) {
+  const email = value.match(/<([^<>]+)>$/)?.[1] ?? value;
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+}
 
 const escapeHTML = (value: string) => value.replace(/[&<>'"]/g, (character) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;",
@@ -27,40 +27,18 @@ export async function POST(request: NextRequest) {
   const form = await request.formData().catch(() => null);
   if (!form) return NextResponse.json({ error: "Invalid application data." }, { status: 400 });
 
-  const role = await getCareerRole(readText(form, "role"));
-  const name = readText(form, "name");
-  const email = readText(form, "email");
-  const phone = readText(form, "phone");
-  const city = readText(form, "city");
-  const profile = readText(form, "profile");
-  const motivation = readText(form, "motivation");
-  const cv = form.get("cv");
+  const parsed = careerApplicationSchema.safeParse({
+    role: readText(form, "role"), name: readText(form, "name"), email: readText(form, "email"),
+    phone: readText(form, "phone"), city: readText(form, "city"), profile: readText(form, "profile"),
+    motivation: readText(form, "motivation"), cv: form.get("cv"),
+  });
+  if (!parsed.success) return NextResponse.json({ error: firstValidationError(parsed.error) }, { status: 400 });
+  const { name, email, phone, city, profile, motivation, cv } = parsed.data;
+  const role = await getCareerRole(parsed.data.role);
+  if (!role) return NextResponse.json({ error: "Select a valid role." }, { status: 400 });
+  if (role.applicationStatus !== "open") return NextResponse.json({ error: "Applications for this role are not open yet." }, { status: 409 });
 
-  if (!role || !name || !email || !phone || !city || !profile || !motivation || !(cv instanceof File)) {
-    return NextResponse.json({ error: "Complete all required fields and attach your CV." }, { status: 400 });
-  }
-  if (name.length > 120 || email.length > 254 || phone.length > 40 || city.length > 100 || profile.length > 500 || motivation.length > 2500) {
-    return NextResponse.json({ error: "One or more fields are too long." }, { status: 400 });
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
-  }
-  if (profile) {
-    try {
-      const url = new URL(profile);
-      if (!new Set(["http:", "https:"]).has(url.protocol)) throw new Error();
-    } catch {
-      return NextResponse.json({ error: "Enter a valid LinkedIn or portfolio URL." }, { status: 400 });
-    }
-  }
-
-  const extension = cv.name.split(".").pop()?.toLowerCase() ?? "";
-  if ((cv.type && !allowedTypes.has(cv.type)) || !allowedExtensions.has(extension)) {
-    return NextResponse.json({ error: "Upload your CV as a PDF, DOC or DOCX file." }, { status: 400 });
-  }
-  if (cv.size === 0 || cv.size > MAX_CV_BYTES) {
-    return NextResponse.json({ error: "Your CV must be smaller than 3 MB." }, { status: 400 });
-  }
+  const extension = cv.name.split(".").pop()?.toLowerCase() ?? "pdf";
 
   const now = Date.now();
   const cooldownKey = email.toLowerCase();
@@ -72,6 +50,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Application email delivery is not configured." }, { status: 503 });
   }
 
+  const configuredFrom = process.env.CAREERS_FROM_EMAIL?.trim();
+  const from = configuredFrom && isValidEmailHeader(configuredFrom) ? configuredFrom : DEFAULT_FROM_EMAIL;
+  const configuredTo = process.env.CAREERS_TO_EMAIL?.trim() ?? "teamcodizzz@gmail.com";
+  if (!isValidEmailHeader(configuredTo)) {
+    console.error("[careers-email] CAREERS_TO_EMAIL is invalid");
+    return NextResponse.json({ error: "Application email delivery is not configured." }, { status: 503 });
+  }
+  if (configuredFrom && from === DEFAULT_FROM_EMAIL) {
+    console.warn("[careers-email] CAREERS_FROM_EMAIL is invalid; using the Resend test sender");
+  }
+
   const safe = {
     role: escapeHTML(role.title), name: escapeHTML(name), email: escapeHTML(email), phone: escapeHTML(phone),
     city: escapeHTML(city), profile: escapeHTML(profile),
@@ -81,8 +70,8 @@ export async function POST(request: NextRequest) {
   const content = Buffer.from(await cv.arrayBuffer()).toString("base64");
   const deliveryId = randomUUID();
   const emailPayload = {
-    from: process.env.CAREERS_FROM_EMAIL ?? "Codizzz Careers <onboarding@resend.dev>",
-    to: [process.env.CAREERS_TO_EMAIL ?? "teamcodizzz@gmail.com"],
+    from,
+    to: [configuredTo],
     reply_to: email,
     subject: `Career application: ${name} | ${role.title}`,
     attachments: [{ filename: fileName, content }],
@@ -107,10 +96,11 @@ export async function POST(request: NextRequest) {
       response = await sendEmail();
     }
     if (!response.ok) {
-      const providerError = await response.json().catch(() => null) as { name?: string } | null;
+      const providerError = await response.json().catch(() => null) as { name?: string; message?: string } | null;
       console.error("[careers-email] Resend rejected a delivery", {
         status: response.status,
         code: providerError?.name ?? "unknown",
+        message: providerError?.message ?? "No provider message returned",
         deliveryId,
       });
       submissionCooldowns.delete(cooldownKey);

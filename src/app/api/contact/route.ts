@@ -1,36 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getServices } from "@/lib/content";
+import { contactFormSchema, firstValidationError } from "@/lib/validation";
 
 const COOLDOWN_MS = 5 * 60 * 1000;
 const submissionCooldowns = new Map<string, number>();
 
-const allowedServices = new Set([
-  "AI Agents",
-  "AI Automation",
-  "Digital FTE",
-  "Custom Software",
-  "Mobile App Development",
-  "Custom Web Development",
-]);
-
 export async function POST(req: NextRequest) {
   const payload = await req.json().catch(() => null);
-  const { name, email, company = "", service, message } = payload ?? {};
-
-  if (![name, email, service, message].every((value) => typeof value === "string" && value.trim().length > 0)) {
-    return NextResponse.json({ error: "All fields required" }, { status: 400 });
-  }
-
-  if (name.length > 120 || email.length > 254 || typeof company !== "string" || company.length > 160 || service.length > 80 || message.length > 5000) {
-    return NextResponse.json({ error: "One or more fields are too long" }, { status: 400 });
-  }
-
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return NextResponse.json({ error: "Enter a valid email address" }, { status: 400 });
-  }
-
-  if (!allowedServices.has(service)) {
-    return NextResponse.json({ error: "Select a valid service" }, { status: 400 });
-  }
+  const parsed = contactFormSchema.safeParse(payload);
+  if (!parsed.success) return NextResponse.json({ error: firstValidationError(parsed.error) }, { status: 400 });
+  const { name, email, company, service, message } = parsed.data;
+  const allowedServices = new Set((await getServices()).map((item) => item.title));
+  if (!allowedServices.has(service)) return NextResponse.json({ error: "Select a valid service." }, { status: 400 });
 
   const now = Date.now();
   const cookieCooldownUntil = Number(req.cookies.get("codizzz_contact_cooldown")?.value ?? 0);

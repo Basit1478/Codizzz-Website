@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { CareerRole } from "@/types/content";
+import { careerApplicationSchema, firstValidationError } from "@/lib/validation";
 import { ArrowIcon } from "./StudioIcons";
 
 type Props = { initialRole: string; roles: CareerRole[] };
@@ -26,10 +27,17 @@ export default function CareerApplicationForm({ initialRole, roles }: Props) {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
-    setState("loading");
     setErrorMessage("");
+    const application = new FormData(form);
+    const parsed = careerApplicationSchema.safeParse(Object.fromEntries(application));
+    if (!parsed.success) {
+      setErrorMessage(firstValidationError(parsed.error));
+      setState("error");
+      return;
+    }
+    setState("loading");
     try {
-      const response = await fetch("/api/careers/apply", { method: "POST", body: new FormData(form) });
+      const response = await fetch("/api/careers/apply", { method: "POST", body: application });
       const result = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(typeof result.error === "string" ? result.error : "Application could not be sent.");
       form.reset();
@@ -51,7 +59,7 @@ export default function CareerApplicationForm({ initialRole, roles }: Props) {
         <p>Complete every field and attach your CV.</p>
         <Link className="text-link" href="/careers">Choose another role <ArrowIcon /></Link>
       </div>
-      <form className="career-form contact-form" onSubmit={submit}>
+      <form className="career-form contact-form" onSubmit={submit} noValidate>
         <fieldset disabled={state === "loading"}>
           <label>
             <span>Role</span>
